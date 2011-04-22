@@ -11,6 +11,8 @@
 
 @implementation GameViewController
 
+@synthesize mapView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,7 +40,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // go to North America
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 37.37;
+    newRegion.center.longitude = -96.24;
+    newRegion.span.latitudeDelta = 28.49;
+    newRegion.span.longitudeDelta = 31.025;
+    
+    [self.mapView setRegion:newRegion animated:NO];
 }
 
 - (void)viewDidUnload
