@@ -1,0 +1,57 @@
+# iOS Custom Map Layer Example #
+
+**A barebones demo app that demonstrates the use of some new [MapKit][mkdoc] functionality
+in iOS 4.0.**:
+
+The *[MKOverlay][mkoverlay]* protocol and *[MKOverlayView][mkoverlayview]* class and how
+to use these to render custom tile layers [a la Google Maps API][imagemaptype]. (i.e. Google
+Maps-compatible tile layers from [Mapnik][mapnik]/Tilecache, gheat, etc.) Examples include tilesets from [OpenStreetMap][osm] and [MapBox][mapbox].
+
+(Caveat: the OpenStreetMap renders opaquely *over* the default Google layer, it does not replace it.)
+
+[mkdoc]: https://developer.apple.com/iphone/library/documentation/MapKit/Reference/MapKit_Framework_Reference/
+[mkoverlay]: https://developer.apple.com/iphone/library/documentation/MapKit/Reference/MKOverlay_protocol/Reference/Reference.html
+[mkoverlayview]: https://developer.apple.com/iphone/library/documentation/MapKit/Reference/MKOverlayView_class/Reference/Reference.html
+[imagemaptype]: https://code.google.com/apis/maps/documentation/javascript/maptypes.html#ImageMapTypes
+[mapnik]: http://mapnik.org/
+[osm]: http://www.openstreetmap.org/
+[mapbox]: http://mapbox.com/tiles
+
+[Comments and feedback are welcome.](https://mike.tig.as/contact/)
+
+<a href="https://d2p12wh0p3fo1n.cloudfront.net/files/20110330/screen1.png"><img src="https://d2p12wh0p3fo1n.cloudfront.net/files/20110330/screen1.png" width="225"/></a>&nbsp;<a href="https://d2p12wh0p3fo1n.cloudfront.net/files/20110330/screen4.png"><img src="https://d2p12wh0p3fo1n.cloudfront.net/files/20110330/screen4.png" width="225"/></a>&nbsp;<a href="https://d2p12wh0p3fo1n.cloudfront.net/files/20110330/screen3.png"><img src="https://d2p12wh0p3fo1n.cloudfront.net/files/20110330/screen3.png" width="225"/></a>
+
+## What? ##
+
+I refactored [django-gheat](http://github.com/mtigas/django-gheat) as a side project and I’ve
+been working on iOS development a bit lately and was seeking a slick way to
+plug the **django-gheat demo tileserver** into the iPhone. The Google Maps API
+just doesn’t have enough performance in the browser to make for a decent user experience.
+
+Some conversation threads recommended combining a UIScrollView with [CATiledLayer][catiledlayer],
+but this seemed unwieldy to couple with the existing MapKit framework.
+
+Lo and behold, iOS 4.0 added custom overlay functionality to MapKit, though I have not seen *any*
+mention or example of it’s use to date.
+
+[catiledlayer]: https://developer.apple.com/mac/library/documentation/GraphicsImaging/Reference/CATiledLayer_class/Introduction/Introduction.html
+
+## Notes ##
+
+The code is generally commented thoroughly. I am not an expert in cartography, so
+my knowledge of map projections and some of the calculations within the code are to be taken
+with a grain of salt.
+
+`CustomOverlayView` compensates for `[[UIScreen mainScreen] scale]`, or the iPhone 4’s pixel doubling.
+The view applies the screen scale factor, creating a situation as if the screen were twice as large.
+Because MapKit loads pixel-doubled tiles but maintains the same viewport, `CustomOverlayView` renders tiles
+of the *next* (or scale-appropriate) zoom level to maintain a one-to-one mapping with MapKit’s own tiles.
+
+The `[MKOverlayView -canDrawMapRect…]` and `[MKOverlayView -drawMapRect…]` methods rely on asynchronously
+downloading tiles as requested (by `-canDrawMapRect`) into cache, and then using that cache in the
+`-drawMapRect` method after the success callback notifies MapKit to try the tile again. 
+
+I am using the Three20Network sub-library from [Facebook’s Three20](http://github.com/facebook/three20) and using
+the [TTURLRequest](http://github.com/facebook/three20/blob/master/src/Three20Network/Headers/TTURLRequest.h)/
+[TTURLCache](http://github.com/facebook/three20/blob/master/src/Three20Network/Headers/TTURLCache.h) stack
+to handle cache storage to disk/memory. The necessary sub-libraries are bundled in this repository.
