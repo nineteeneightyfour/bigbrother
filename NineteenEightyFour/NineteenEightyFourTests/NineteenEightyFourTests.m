@@ -27,7 +27,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in NineteenEightyFourTests");
+    STAssertEquals(1+2, 3, nil);
 }
 
 @end
