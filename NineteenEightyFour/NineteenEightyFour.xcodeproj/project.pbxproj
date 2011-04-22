@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E13563813621BC90038C749 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563713621BC90038C749 /* UIKit.framework */; };
+		8E13563A13621BC90038C749 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563913621BC90038C749 /* Foundation.framework */; };
+		8E13563C13621BC90038C749 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563B13621BC90038C749 /* CoreGraphics.framework */; };
+		8E13564213621BC90038C749 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E13564013621BC90038C749 /* InfoPlist.strings */; };
+		8E13564513621BC90038C749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E13564413621BC90038C749 /* main.m */; };
+		8E13564813621BC90038C749 /* NineteenEightyFourAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E13564713621BC90038C749 /* NineteenEightyFourAppDelegate.m */; };
+		8E13564B13621BC90038C749 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E13564913621BC90038C749 /* MainWindow.xib */; };
+		8E13565213621BCA0038C749 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563713621BC90038C749 /* UIKit.framework */; };
+		8E13565313621BCA0038C749 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563913621BC90038C749 /* Foundation.framework */; };
+		8E13565413621BCA0038C749 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563B13621BC90038C749 /* CoreGraphics.framework */; };
+		8E13565C13621BCA0038C749 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E13565A13621BCA0038C749 /* InfoPlist.strings */; };
+		8E13565F13621BCA0038C749 /* NineteenEightyFourTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 8E13565E13621BCA0038C749 /* NineteenEightyFourTests.h */; };
+		8E13566113621BCA0038C749 /* NineteenEightyFourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E13566013621BCA0038C749 /* NineteenEightyFourTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E13565513621BCA0038C749 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E13562A13621BC80038C749 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E13563213621BC90038C749;
+			remoteInfo = NineteenEightyFour;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E13563313621BC90038C749 /* NineteenEightyFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineteenEightyFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E13563713621BC90038C749 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8E13563913621BC90038C749 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8E13563B13621BC90038C749 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8E13563F13621BC90038C749 /* NineteenEightyFour-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NineteenEightyFour-Info.plist"; sourceTree = "<group>"; };
+		8E13564113621BC90038C749 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E13564313621BC90038C749 /* NineteenEightyFour-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NineteenEightyFour-Prefix.pch"; sourceTree = "<group>"; };
+		8E13564413621BC90038C749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E13564613621BC90038C749 /* NineteenEightyFourAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NineteenEightyFourAppDelegate.h; sourceTree = "<group>"; };
+		8E13564713621BC90038C749 /* NineteenEightyFourAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineteenEightyFourAppDelegate.m; sourceTree = "<group>"; };
+		8E13564A13621BC90038C749 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		8E13565113621BCA0038C749 /* NineteenEightyFourTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NineteenEightyFourTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E13565913621BCA0038C749 /* NineteenEightyFourTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NineteenEightyFourTests-Info.plist"; sourceTree = "<group>"; };
+		8E13565B13621BCA0038C749 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E13565D13621BCA0038C749 /* NineteenEightyFourTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NineteenEightyFourTests-Prefix.pch"; sourceTree = "<group>"; };
+		8E13565E13621BCA0038C749 /* NineteenEightyFourTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NineteenEightyFourTests.h; sourceTree = "<group>"; };
+		8E13566013621BCA0038C749 /* NineteenEightyFourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineteenEightyFourTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E13563013621BC90038C749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E13563813621BC90038C749 /* UIKit.framework in Frameworks */,
+				8E13563A13621BC90038C749 /* Foundation.framework in Frameworks */,
+				8E13563C13621BC90038C749 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E13564D13621BCA0038C749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E13565213621BCA0038C749 /* UIKit.framework in Frameworks */,
+				8E13565313621BCA0038C749 /* Foundation.framework in Frameworks */,
+				8E13565413621BCA0038C749 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E13562813621BC80038C749 = {
+			isa = PBXGroup;
+			children = (
+				8E13563D13621BC90038C749 /* NineteenEightyFour */,
+				8E13565713621BCA0038C749 /* NineteenEightyFourTests */,
+				8E13563613621BC90038C749 /* Frameworks */,
+				8E13563413621BC90038C749 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E13563413621BC90038C749 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E13563313621BC90038C749 /* NineteenEightyFour.app */,
+				8E13565113621BCA0038C749 /* NineteenEightyFourTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E13563613621BC90038C749 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E13563713621BC90038C749 /* UIKit.framework */,
+				8E13563913621BC90038C749 /* Foundation.framework */,
+				8E13563B13621BC90038C749 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E13563D13621BC90038C749 /* NineteenEightyFour */ = {
+			isa = PBXGroup;
+			children = (
+				8E13564613621BC90038C749 /* NineteenEightyFourAppDelegate.h */,
+				8E13564713621BC90038C749 /* NineteenEightyFourAppDelegate.m */,
+				8E13564913621BC90038C749 /* MainWindow.xib */,
+				8E13563E13621BC90038C749 /* Supporting Files */,
+			);
+			path = NineteenEightyFour;
+			sourceTree = "<group>";
+		};
+		8E13563E13621BC90038C749 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E13563F13621BC90038C749 /* NineteenEightyFour-Info.plist */,
+				8E13564013621BC90038C749 /* InfoPlist.strings */,
+				8E13564313621BC90038C749 /* NineteenEightyFour-Prefix.pch */,
+				8E13564413621BC90038C749 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E13565713621BCA0038C749 /* NineteenEightyFourTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E13565E13621BCA0038C749 /* NineteenEightyFourTests.h */,
+				8E13566013621BCA0038C749 /* NineteenEightyFourTests.m */,
+				8E13565813621BCA0038C749 /* Supporting Files */,
+			);
+			path = NineteenEightyFourTests;
+			sourceTree = "<group>";
+		};
+		8E13565813621BCA0038C749 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E13565913621BCA0038C749 /* NineteenEightyFourTests-Info.plist */,
+				8E13565A13621BCA0038C749 /* InfoPlist.strings */,
+				8E13565D13621BCA0038C749 /* NineteenEightyFourTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E13563213621BC90038C749 /* NineteenEightyFour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E13566413621BCA0038C749 /* Build configuration list for PBXNativeTarget "NineteenEightyFour" */;
+			buildPhases = (
+				8E13562F13621BC90038C749 /* Sources */,
+				8E13563013621BC90038C749 /* Frameworks */,
+				8E13563113621BC90038C749 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NineteenEightyFour;
+			productName = NineteenEightyFour;
+			productReference = 8E13563313621BC90038C749 /* NineteenEightyFour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E13565013621BCA0038C749 /* NineteenEightyFourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E13566713621BCA0038C749 /* Build configuration list for PBXNativeTarget "NineteenEightyFourTests" */;
+			buildPhases = (
+				8E13564C13621BCA0038C749 /* Sources */,
+				8E13564D13621BCA0038C749 /* Frameworks */,
+				8E13564E13621BCA0038C749 /* Resources */,
+				8E13564F13621BCA0038C749 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E13565613621BCA0038C749 /* PBXTargetDependency */,
+			);
+			name = NineteenEightyFourTests;
+			productName = NineteenEightyFourTests;
+			productReference = 8E13565113621BCA0038C749 /* NineteenEightyFourTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E13562A13621BC80038C749 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Jonathan Perret";
+			};
+			buildConfigurationList = 8E13562D13621BC90038C749 /* Build configuration list for PBXProject "NineteenEightyFour" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8E13562813621BC80038C749;
+			productRefGroup = 8E13563413621BC90038C749 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E13563213621BC90038C749 /* NineteenEightyFour */,
+				8E13565013621BCA0038C749 /* NineteenEightyFourTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E13563113621BC90038C749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E13564213621BC90038C749 /* InfoPlist.strings in Resources */,
+				8E13564B13621BC90038C749 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E13564E13621BCA0038C749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E13565C13621BCA0038C749 /* InfoPlist.strings in Resources */,
+				8E13565F13621BCA0038C749 /* NineteenEightyFourTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E13564F13621BCA0038C749 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E13562F13621BC90038C749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E13564513621BC90038C749 /* main.m in Sources */,
+				8E13564813621BC90038C749 /* NineteenEightyFourAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E13564C13621BCA0038C749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E13566113621BCA0038C749 /* NineteenEightyFourTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E13565613621BCA0038C749 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E13563213621BC90038C749 /* NineteenEightyFour */;
+			targetProxy = 8E13565513621BCA0038C749 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E13564013621BC90038C749 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E13564113621BC90038C749 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8E13564913621BC90038C749 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E13564A13621BC90038C749 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		8E13565A13621BCA0038C749 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E13565B13621BCA0038C749 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E13566213621BCA0038C749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8E13566313621BCA0038C749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		8E13566513621BCA0038C749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NineteenEightyFour/NineteenEightyFour-Prefix.pch";
+				INFOPLIST_FILE = "NineteenEightyFour/NineteenEightyFour-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8E13566613621BCA0038C749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NineteenEightyFour/NineteenEightyFour-Prefix.pch";
+				INFOPLIST_FILE = "NineteenEightyFour/NineteenEightyFour-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8E13566813621BCA0038C749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NineteenEightyFour.app/NineteenEightyFour";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NineteenEightyFourTests/NineteenEightyFourTests-Prefix.pch";
+				INFOPLIST_FILE = "NineteenEightyFourTests/NineteenEightyFourTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8E13566913621BCA0038C749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NineteenEightyFour.app/NineteenEightyFour";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NineteenEightyFourTests/NineteenEightyFourTests-Prefix.pch";
+				INFOPLIST_FILE = "NineteenEightyFourTests/NineteenEightyFourTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E13562D13621BC90038C749 /* Build configuration list for PBXProject "NineteenEightyFour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E13566213621BCA0038C749 /* Debug */,
+				8E13566313621BCA0038C749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E13566413621BCA0038C749 /* Build configuration list for PBXNativeTarget "NineteenEightyFour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E13566513621BCA0038C749 /* Debug */,
+				8E13566613621BCA0038C749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8E13566713621BCA0038C749 /* Build configuration list for PBXNativeTarget "NineteenEightyFourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E13566813621BCA0038C749 /* Debug */,
+				8E13566913621BCA0038C749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E13562A13621BC80038C749 /* Project object */;
+}
