@@ -26,6 +26,8 @@
 		8EB39298136367B700E96B04 /* CameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB39297136367B600E96B04 /* CameraOverlayView.m */; };
 		8EB392A513636F5900E96B04 /* CameraOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB392A413636F5900E96B04 /* CameraOverlay.m */; };
 		8EB392A713637A5100E96B04 /* oeil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB392A613637A5100E96B04 /* oeil.png */; };
+		F41938DD136398A7000FF869 /* intro.wav in Resources */ = {isa = PBXBuildFile; fileRef = F41938DC136398A7000FF869 /* intro.wav */; };
+		F41938E013639A15000FF869 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41938DF13639A15000FF869 /* AVFoundation.framework */; };
 		F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F428CAEA1362C01600B93651 /* CoreLocation.framework */; };
 		F4547A641362E3DE00D39F65 /* CameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A631362E3DE00D39F65 /* CameraTests.m */; };
 		F4547A681362E62200D39F65 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A671362E62200D39F65 /* Camera.m */; };
@@ -74,6 +76,8 @@
 		8EB392A313636F5900E96B04 /* CameraOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlay.h; sourceTree = "<group>"; };
 		8EB392A413636F5900E96B04 /* CameraOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlay.m; sourceTree = "<group>"; };
 		8EB392A613637A5100E96B04 /* oeil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oeil.png; sourceTree = "<group>"; };
+		F41938DC136398A7000FF869 /* intro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = intro.wav; sourceTree = "<group>"; };
+		F41938DF13639A15000FF869 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F428CAEA1362C01600B93651 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4547A631362E3DE00D39F65 /* CameraTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTests.m; sourceTree = "<group>"; };
 		F4547A661362E62200D39F65 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41938E013639A15000FF869 /* AVFoundation.framework in Frameworks */,
 				F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */,
 				8E13563813621BC90038C749 /* UIKit.framework in Frameworks */,
 				8E13563A13621BC90038C749 /* Foundation.framework in Frameworks */,
@@ -136,6 +141,7 @@
 		8E13563613621BC90038C749 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F41938DF13639A15000FF869 /* AVFoundation.framework */,
 				F428CAEA1362C01600B93651 /* CoreLocation.framework */,
 				8E13563713621BC90038C749 /* UIKit.framework */,
 				8E13563913621BC90038C749 /* Foundation.framework */,
@@ -205,6 +211,7 @@
 				F49D2BD813638E5D00DABCFE /* home.png */,
 				8E1C8E37136338020081C5F7 /* Icon.png */,
 				8E1C8E38136338020081C5F7 /* Icon@2.png */,
+				F41938DC136398A7000FF869 /* intro.wav */,
 				8E1C8E39136338020081C5F7 /* iTunesArtwork */,
 				8EB392A613637A5100E96B04 /* oeil.png */,
 				8E1C8E0113632D5D0081C5F7 /* vignette.png */,
@@ -292,6 +299,7 @@
 				8EB392A713637A5100E96B04 /* oeil.png in Resources */,
 				F49D2BD41363854E00DABCFE /* MenuViewController.xib in Resources */,
 				F49D2BD913638E5D00DABCFE /* home.png in Resources */,
+				F41938DD136398A7000FF869 /* intro.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

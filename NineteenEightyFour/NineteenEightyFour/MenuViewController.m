@@ -1,5 +1,6 @@
 #import "MenuViewController.h"
 #import "GameViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation MenuViewController
 
@@ -7,7 +8,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -42,6 +42,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSLog(@"isPrepareOK");
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"intro" ofType: @"wav"];
+    NSURL *soundFileURL = [[[NSURL alloc] initFileURLWithPath: soundFilePath] autorelease];
+    AVAudioPlayer *appSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: soundFileURL error: nil];
+    [appSoundPlayer setVolume: 1.0];
+    [appSoundPlayer setNumberOfLoops: -1];
+    [appSoundPlayer play];
+
 }
 
 - (void)viewDidUnload

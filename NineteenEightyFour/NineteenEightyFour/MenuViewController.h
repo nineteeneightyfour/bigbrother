@@ -10,7 +10,6 @@
 
 
 @interface MenuViewController : UIViewController {
-    
 }
 - (IBAction)startGame;
 @end
