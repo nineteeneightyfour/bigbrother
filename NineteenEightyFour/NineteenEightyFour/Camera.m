@@ -5,7 +5,12 @@
 
 @synthesize position;
 @synthesize radius;
+@synthesize isActive;
 
+- (CLLocationCoordinate2D)coordinate
+{
+    return position.coordinate;
+}
 
 + (Camera *)cameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius
 {

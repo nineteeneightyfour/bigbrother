@@ -4,6 +4,8 @@
 }
 @property (nonatomic, retain) CLLocation* position;
 @property (nonatomic) CLLocationDistance radius;
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic) BOOL isActive;
 
 + (Camera *)cameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius;
 

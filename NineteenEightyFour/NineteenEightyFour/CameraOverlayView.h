@@ -1,0 +1,5 @@
+@interface CameraOverlayView : MKOverlayView {
+    
+}
+
+@end

@@ -9,7 +9,7 @@
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 
-- (void)createCamera;
+- (void)createCameras;
 - (void)playerMovedTo:(CLLocationCoordinate2D)coordinate;
 - (void)tick;
 - (void)addCameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius;

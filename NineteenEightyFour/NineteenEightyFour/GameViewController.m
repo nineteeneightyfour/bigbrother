@@ -1,12 +1,6 @@
-//
-//  GameViewController.m
-//  NineteenEightyFour
-//
-//  Created by Stéphane Hanser on 23/04/11.
-//  Copyright 2011 Jonathan Perret. All rights reserved.
-//
-
 #import "GameViewController.h"
+#import "CameraOverlayView.h"
+#import "CameraOverlay.h"
 
 @implementation GameViewController
 
@@ -50,7 +44,7 @@
     
     cameras = [[NSMutableArray array] retain];
     
-    [self createCamera];
+    [self createCameras];
 
 #if TARGET_IPHONE_SIMULATOR
     [self playerMovedTo:CLLocationCoordinate2DMake(48.870262, 2.342624)];
@@ -64,7 +58,7 @@
     [self playerMovedTo:CLLocationCoordinate2DMake(lastPosition.latitude + 0.000001, lastPosition.longitude)];
 }
 
-- (void)createCamera
+- (void)createCameras
 {
     CLLocationDistance cameraRadius = 30.0;
 
@@ -72,14 +66,14 @@
         CLLocationCoordinate2D cameraPosition = CLLocationCoordinate2DMake(48.870062+i*0.0005, 2.342624);
         [self addCameraWithPosition:cameraPosition andRadius:cameraRadius];
     }
+
+    CameraOverlay *overlay = [[CameraOverlay alloc] initWithCameras:cameras];
+    [mapView addOverlay:overlay];
 }
 
 - (void)addCameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius
 {
     Camera *camera = [Camera cameraWithPosition:cameraPosition andRadius:cameraRadius];
-    
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:camera.position.coordinate radius:camera.radius];
-    [mapView addOverlay:circle];
     
     [cameras addObject:camera];
 }
@@ -100,23 +94,18 @@
     
     lastPosition = coordinate;
     
-    for (int i=0; i<[cameras count]; i++) {
-        Camera* camera = [cameras objectAtIndex:i];
-        id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:i];
-        MKCircleView *theOverlayView = (MKCircleView *)[mapView viewForOverlay:theOverlay];
-        if ([camera seesPoint:lastPosition]) {
-            theOverlayView.fillColor = [UIColor colorWithRed:1.0 green:0.0 blue:0 alpha:0.6];
-        } else {
-            theOverlayView.fillColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.6];
-        }
-        [theOverlayView setNeedsDisplay];
+    for (Camera *camera in cameras) {
+        camera.isActive = [camera seesPoint:lastPosition];
     }
+
+    id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
+    CameraOverlayView *theOverlayView = (CameraOverlayView *)[mapView viewForOverlay:theOverlay];
+    [theOverlayView setNeedsDisplay];
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
 {
-    MKCircleView *circleView = [[[MKCircleView alloc ] initWithCircle:overlay] autorelease];
-    return circleView;
+    return [[[CameraOverlayView alloc ] initWithOverlay:overlay] autorelease];
 }
 
 - (void)viewDidUnload
