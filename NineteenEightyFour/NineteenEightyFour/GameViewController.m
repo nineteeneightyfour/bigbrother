@@ -41,13 +41,26 @@
 {
     [super viewDidLoad];
 
+#if !TARGET_IPHONE_SIMULATOR
     // CLLocationManager permet la gestion de la position géographique de l'utilisateur
 	locationManager=[[CLLocationManager alloc] init];
 	[locationManager setDelegate:self];
 	[locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
 	[locationManager startUpdatingLocation];
+#endif
     
     [self createCamera];
+
+#if TARGET_IPHONE_SIMULATOR
+    [self playerMovedTo:CLLocationCoordinate2DMake(48.870262, 2.342624)];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+#endif
+
+}
+
+- (void)tick
+{
+    [self playerMovedTo:CLLocationCoordinate2DMake(lastPosition.latitude + 0.000001, lastPosition.longitude)];
 }
 
 - (void)createCamera
@@ -63,17 +76,17 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     CLLocationCoordinate2D coordinate = newLocation.coordinate;
-    
-#if TARGET_IPHONE_SIMULATOR
-    coordinate = CLLocationCoordinate2DMake(48.870062, 2.342624);
-#endif
-    
-	MKCoordinateRegion region;
+    [self playerMovedTo:coordinate];
+}
+
+- (void)playerMovedTo:(CLLocationCoordinate2D)coordinate
+{
+    MKCoordinateRegion region;
 	region.center = coordinate;
 	region.span.latitudeDelta = .001;
 	region.span.longitudeDelta = .001;
 	[mapView setRegion:region animated:TRUE];
-
+    
     lastPosition = coordinate;
     id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
     MKCircleView *theOverlayView = (MKCircleView *)[mapView viewForOverlay:theOverlay];
@@ -83,8 +96,8 @@
         theOverlayView.fillColor = [UIColor clearColor];
     }
     [theOverlayView setNeedsDisplay];
-}
 
+}
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
 {
     MKCircleView *circleView = [[[MKCircleView alloc ] initWithCircle:overlay] autorelease];
