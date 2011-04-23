@@ -91,7 +91,7 @@
     id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
     MKCircleView *theOverlayView = (MKCircleView *)[mapView viewForOverlay:theOverlay];
     if ([camera seesPoint:lastPosition]) {
-        theOverlayView.fillColor = [UIColor colorWithRed:1.0 green:0.0 blue:0 alpha:0.2];
+        theOverlayView.fillColor = [UIColor colorWithRed:1.0 green:0.0 blue:0 alpha:0.6];
     } else {
         theOverlayView.fillColor = [UIColor clearColor];
     }

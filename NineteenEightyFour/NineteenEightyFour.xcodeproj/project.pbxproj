@@ -19,6 +19,7 @@
 		8E13565413621BCA0038C749 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563B13621BC90038C749 /* CoreGraphics.framework */; };
 		8E13565C13621BCA0038C749 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E13565A13621BCA0038C749 /* InfoPlist.strings */; };
 		8E13566D1362210E0038C749 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13566C1362210E0038C749 /* MapKit.framework */; };
+		8E1C8E0213632D5D0081C5F7 /* vignette.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C8E0113632D5D0081C5F7 /* vignette.png */; };
 		8E49DEC51362D5C10020D931 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E49DEC41362D5C10020D931 /* Icon.png */; };
 		F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F428CAEA1362C01600B93651 /* CoreLocation.framework */; };
 		F4547A641362E3DE00D39F65 /* CameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A631362E3DE00D39F65 /* CameraTests.m */; };
@@ -56,6 +57,7 @@
 		8E13565B13621BCA0038C749 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8E13565D13621BCA0038C749 /* NineteenEightyFourTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NineteenEightyFourTests-Prefix.pch"; sourceTree = "<group>"; };
 		8E13566C1362210E0038C749 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8E1C8E0113632D5D0081C5F7 /* vignette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vignette.png; sourceTree = "<group>"; };
 		8E49DEC41362D5C10020D931 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F428CAEA1362C01600B93651 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4547A631362E3DE00D39F65 /* CameraTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTests.m; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		8E49DEC21362D57F0020D931 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E1C8E0113632D5D0081C5F7 /* vignette.png */,
 				8E49DEC41362D5C10020D931 /* Icon.png */,
 			);
 			path = Resources;
@@ -253,6 +256,7 @@
 				8E13564B13621BC90038C749 /* MainWindow.xib in Resources */,
 				F46B85321362356600B56B4A /* GameViewController.xib in Resources */,
 				8E49DEC51362D5C10020D931 /* Icon.png in Resources */,
+				8E1C8E0213632D5D0081C5F7 /* vignette.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
