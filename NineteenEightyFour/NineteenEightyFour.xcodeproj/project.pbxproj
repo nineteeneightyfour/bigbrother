@@ -33,6 +33,9 @@
 		F4547A6A1362E65800D39F65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F428CAEA1362C01600B93651 /* CoreLocation.framework */; };
 		F46B85311362356600B56B4A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B852F1362356600B56B4A /* GameViewController.m */; };
 		F46B85321362356600B56B4A /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B85301362356600B56B4A /* GameViewController.xib */; };
+		F49D2BD31363854E00DABCFE /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49D2BD11363854E00DABCFE /* MenuViewController.m */; };
+		F49D2BD41363854E00DABCFE /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49D2BD21363854E00DABCFE /* MenuViewController.xib */; };
+		F49D2BD913638E5D00DABCFE /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F49D2BD813638E5D00DABCFE /* home.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,10 @@
 		F46B852E1362356600B56B4A /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		F46B852F1362356600B56B4A /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		F46B85301362356600B56B4A /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		F49D2BD01363854E00DABCFE /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		F49D2BD11363854E00DABCFE /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		F49D2BD21363854E00DABCFE /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		F49D2BD813638E5D00DABCFE /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,16 +150,19 @@
 			children = (
 				8E13564613621BC90038C749 /* NineteenEightyFourAppDelegate.h */,
 				8E13564713621BC90038C749 /* NineteenEightyFourAppDelegate.m */,
-				F46B852E1362356600B56B4A /* GameViewController.h */,
-				F46B852F1362356600B56B4A /* GameViewController.m */,
 				F4547A661362E62200D39F65 /* Camera.h */,
 				F4547A671362E62200D39F65 /* Camera.m */,
 				8EB392A313636F5900E96B04 /* CameraOverlay.h */,
 				8EB392A413636F5900E96B04 /* CameraOverlay.m */,
 				8EB39296136367B600E96B04 /* CameraOverlayView.h */,
 				8EB39297136367B600E96B04 /* CameraOverlayView.m */,
-				8E13564913621BC90038C749 /* MainWindow.xib */,
+				F46B852E1362356600B56B4A /* GameViewController.h */,
+				F46B852F1362356600B56B4A /* GameViewController.m */,
 				F46B85301362356600B56B4A /* GameViewController.xib */,
+				F49D2BD01363854E00DABCFE /* MenuViewController.h */,
+				F49D2BD11363854E00DABCFE /* MenuViewController.m */,
+				F49D2BD21363854E00DABCFE /* MenuViewController.xib */,
+				8E13564913621BC90038C749 /* MainWindow.xib */,
 				8E13563E13621BC90038C749 /* Supporting Files */,
 				8E49DEC21362D57F0020D931 /* Resources */,
 			);
@@ -192,6 +202,7 @@
 		8E49DEC21362D57F0020D931 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F49D2BD813638E5D00DABCFE /* home.png */,
 				8E1C8E37136338020081C5F7 /* Icon.png */,
 				8E1C8E38136338020081C5F7 /* Icon@2.png */,
 				8E1C8E39136338020081C5F7 /* iTunesArtwork */,
@@ -279,6 +290,8 @@
 				8E1C8E3B136338020081C5F7 /* Icon@2.png in Resources */,
 				8E1C8E3C136338020081C5F7 /* iTunesArtwork in Resources */,
 				8EB392A713637A5100E96B04 /* oeil.png in Resources */,
+				F49D2BD41363854E00DABCFE /* MenuViewController.xib in Resources */,
+				F49D2BD913638E5D00DABCFE /* home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +332,7 @@
 				F4547A681362E62200D39F65 /* Camera.m in Sources */,
 				8EB39298136367B700E96B04 /* CameraOverlayView.m in Sources */,
 				8EB392A513636F5900E96B04 /* CameraOverlay.m in Sources */,
+				F49D2BD31363854E00DABCFE /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

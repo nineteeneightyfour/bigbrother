@@ -70,7 +70,7 @@ const CLLocationDegrees kLatitudeDelta = .0034;
         [self addCameraWithPosition:cameraPosition andRadius:cameraRadius];
     }
 
-    CameraOverlay *overlay = [[CameraOverlay alloc] initWithCameras:cameras];
+    CameraOverlay *overlay = [[[CameraOverlay alloc] initWithCameras:cameras] autorelease];
     [mapView addOverlay:overlay];
 }
 
@@ -103,7 +103,7 @@ const CLLocationDegrees kLatitudeDelta = .0034;
 
     id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
     CameraOverlayView *theOverlayView = (CameraOverlayView *)[mapView viewForOverlay:theOverlay];
-    [theOverlayView setNeedsDisplay];
+    [theOverlayView setNeedsDisplayInMapRect:MKMapRectWorld];
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
