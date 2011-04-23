@@ -2,7 +2,7 @@
 @interface Camera : NSObject {
     
 }
-@property (nonatomic) CLLocationCoordinate2D position;
+@property (nonatomic, retain) CLLocation* position;
 @property (nonatomic) CLLocationDistance radius;
 
 + (Camera *)cameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius;

@@ -16,7 +16,7 @@
 {
     self = [super init];
     if (self) {
-        self.position = cameraPosition;
+        self.position = [[CLLocation alloc] initWithLatitude:cameraPosition.latitude longitude:cameraPosition.longitude];
         self.radius = cameraRadius;
     }
     return self;
@@ -27,9 +27,7 @@
 {
     CLLocation *pointLocation = [[CLLocation alloc] initWithLatitude:point.latitude longitude:point.longitude];
 
-    CLLocation *positionLocation = [[CLLocation alloc] initWithLatitude:position.latitude longitude:position.longitude];
-
-    CLLocationDistance distance = [positionLocation distanceFromLocation:pointLocation];
+    CLLocationDistance distance = [position distanceFromLocation:pointLocation];
     
     return distance < radius;
 }
