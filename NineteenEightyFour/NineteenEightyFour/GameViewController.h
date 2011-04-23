@@ -9,5 +9,6 @@
 @property (nonatomic, retain) Camera *camera;
 
 - (void)createCamera;
+- (void)playerMovedTo:(CLLocationCoordinate2D)coordinate;
 
 @end
