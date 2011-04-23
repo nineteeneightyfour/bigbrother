@@ -107,7 +107,7 @@
         if ([camera seesPoint:lastPosition]) {
             theOverlayView.fillColor = [UIColor colorWithRed:1.0 green:0.0 blue:0 alpha:0.6];
         } else {
-            theOverlayView.fillColor = [UIColor clearColor];
+            theOverlayView.fillColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.6];
         }
         [theOverlayView setNeedsDisplay];
     }
@@ -116,8 +116,6 @@
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
 {
     MKCircleView *circleView = [[[MKCircleView alloc ] initWithCircle:overlay] autorelease];
-    circleView.strokeColor = [UIColor redColor];
-    circleView.lineWidth = 3.0;
     return circleView;
 }
 
