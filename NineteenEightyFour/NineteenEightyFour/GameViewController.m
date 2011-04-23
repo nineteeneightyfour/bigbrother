@@ -52,8 +52,8 @@
 
 - (void)createCamera
 {
-    CLLocationCoordinate2D cameraPosition = CLLocationCoordinate2DMake(48.870844, 2.341831);
-    CLLocationDistance cameraRadius = 50.0;
+    CLLocationCoordinate2D cameraPosition = CLLocationCoordinate2DMake(48.870562, 2.342624);
+    CLLocationDistance cameraRadius = 30.0;
     MKCircle *circle = [MKCircle circleWithCenterCoordinate:cameraPosition radius:cameraRadius];
     [mapView addOverlay:circle];
 }
