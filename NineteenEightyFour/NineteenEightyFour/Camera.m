@@ -16,16 +16,21 @@
 {
     self = [super init];
     if (self) {
-        self.position = [[CLLocation alloc] initWithLatitude:cameraPosition.latitude longitude:cameraPosition.longitude];
+        self.position = [[[CLLocation alloc] initWithLatitude:cameraPosition.latitude longitude:cameraPosition.longitude] autorelease];
         self.radius = cameraRadius;
     }
     return self;
     
 }
 
+- (void)dealloc {
+    self.position = nil;
+    [super dealloc];
+}
+
 - (BOOL)seesPoint:(CLLocationCoordinate2D)point
 {
-    CLLocation *pointLocation = [[CLLocation alloc] initWithLatitude:point.latitude longitude:point.longitude];
+    CLLocation *pointLocation = [[[CLLocation alloc] initWithLatitude:point.latitude longitude:point.longitude] autorelease];
 
     CLLocationDistance distance = [position distanceFromLocation:pointLocation];
     
