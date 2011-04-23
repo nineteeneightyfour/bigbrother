@@ -8,12 +8,14 @@
 {
     self = [super initWithOverlay:overlay];
     if (self) {
+        oeil = [UIImage imageNamed:@"oeil"];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [oeil release], oeil = nil;
     [super dealloc];
 }
 
@@ -41,8 +43,12 @@
         } else {
             CGContextSetRGBFillColor(context, 1,1,1,0.6);
         }
-        
         CGContextFillEllipseInRect(context, cameraCGRect);
+        
+        CGPoint oeilPoint = [self pointForMapPoint:mapCentre];
+        CGSize oeilSize = oeil.size;
+        CGRect oeilRect = CGRectMake(oeilPoint.x - oeilSize.width/2, oeilPoint.y - oeilSize.height / 2, oeilSize.width, oeilSize.height);
+        CGContextDrawImage(context, oeilRect, oeil.CGImage);
     }
 }
 

@@ -25,6 +25,7 @@
 		8E1C8E3C136338020081C5F7 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C8E39136338020081C5F7 /* iTunesArtwork */; };
 		8EB39298136367B700E96B04 /* CameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB39297136367B600E96B04 /* CameraOverlayView.m */; };
 		8EB392A513636F5900E96B04 /* CameraOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB392A413636F5900E96B04 /* CameraOverlay.m */; };
+		8EB392A713637A5100E96B04 /* oeil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB392A613637A5100E96B04 /* oeil.png */; };
 		F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F428CAEA1362C01600B93651 /* CoreLocation.framework */; };
 		F4547A641362E3DE00D39F65 /* CameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A631362E3DE00D39F65 /* CameraTests.m */; };
 		F4547A681362E62200D39F65 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A671362E62200D39F65 /* Camera.m */; };
@@ -69,6 +70,7 @@
 		8EB39297136367B600E96B04 /* CameraOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlayView.m; sourceTree = "<group>"; };
 		8EB392A313636F5900E96B04 /* CameraOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlay.h; sourceTree = "<group>"; };
 		8EB392A413636F5900E96B04 /* CameraOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlay.m; sourceTree = "<group>"; };
+		8EB392A613637A5100E96B04 /* oeil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oeil.png; sourceTree = "<group>"; };
 		F428CAEA1362C01600B93651 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4547A631362E3DE00D39F65 /* CameraTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTests.m; sourceTree = "<group>"; };
 		F4547A661362E62200D39F65 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				8E1C8E37136338020081C5F7 /* Icon.png */,
 				8E1C8E38136338020081C5F7 /* Icon@2.png */,
 				8E1C8E39136338020081C5F7 /* iTunesArtwork */,
+				8EB392A613637A5100E96B04 /* oeil.png */,
 				8E1C8E0113632D5D0081C5F7 /* vignette.png */,
 			);
 			path = Resources;
@@ -275,6 +278,7 @@
 				8E1C8E3A136338020081C5F7 /* Icon.png in Resources */,
 				8E1C8E3B136338020081C5F7 /* Icon@2.png in Resources */,
 				8E1C8E3C136338020081C5F7 /* iTunesArtwork in Resources */,
+				8EB392A713637A5100E96B04 /* oeil.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
