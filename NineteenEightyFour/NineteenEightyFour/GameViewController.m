@@ -46,14 +46,34 @@
 	[locationManager setDelegate:self];
 	[locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
 	[locationManager startUpdatingLocation];
+    
+    [self createCamera];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+- (void)createCamera
+{
+    CLLocationCoordinate2D cameraPosition = CLLocationCoordinate2DMake(48.870844, 2.341831);
+    CLLocationDistance cameraRadius = 50.0;
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:cameraPosition radius:cameraRadius];
+    [mapView addOverlay:circle];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
 	MKCoordinateRegion region;
-	region.center = newLocation.coordinate;;
+	region.center = newLocation.coordinate;
 	region.span.latitudeDelta = .001;
 	region.span.longitudeDelta = .001;
 	[mapView setRegion:region animated:TRUE];
+}
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
+{
+    MKCircleView *circleView = [[[MKCircleView alloc ] initWithCircle:overlay] autorelease];
+    circleView.strokeColor = [UIColor redColor];
+    circleView.lineWidth = 3.0;
+    circleView.fillColor = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:0.2];
+    return circleView;
 }
 
 - (void)viewDidUnload

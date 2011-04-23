@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GameViewController : UIViewController<CLLocationManagerDelegate> {
+@interface GameViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate> {
     CLLocationManager *locationManager;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
+
+- (void)createCamera;
 
 @end
