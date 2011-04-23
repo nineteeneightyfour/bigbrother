@@ -1,0 +1,7 @@
+K 13
+svn:externals
+V 149
+libs http://developers.cloudmade.com/svn/iphone-api/iphone-api/trunk/libs/
+inc  http://developers.cloudmade.com/svn/iphone-api/iphone-api/trunk/inc/
+
+END
