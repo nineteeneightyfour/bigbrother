@@ -22,6 +22,7 @@
 		8E13566113621BCA0038C749 /* NineteenEightyFourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E13566013621BCA0038C749 /* NineteenEightyFourTests.m */; };
 		8E13566D1362210E0038C749 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13566C1362210E0038C749 /* MapKit.framework */; };
 		8E49DEC51362D5C10020D931 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E49DEC41362D5C10020D931 /* Icon.png */; };
+		F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F428CAEA1362C01600B93651 /* CoreLocation.framework */; };
 		F46B85311362356600B56B4A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B852F1362356600B56B4A /* GameViewController.m */; };
 		F46B85321362356600B56B4A /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B85301362356600B56B4A /* GameViewController.xib */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		8E13566013621BCA0038C749 /* NineteenEightyFourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineteenEightyFourTests.m; sourceTree = "<group>"; };
 		8E13566C1362210E0038C749 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8E49DEC41362D5C10020D931 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F428CAEA1362C01600B93651 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F46B852E1362356600B56B4A /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		F46B852F1362356600B56B4A /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		F46B85301362356600B56B4A /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */,
 				8E13563813621BC90038C749 /* UIKit.framework in Frameworks */,
 				8E13563A13621BC90038C749 /* Foundation.framework in Frameworks */,
 				8E13563C13621BC90038C749 /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +111,7 @@
 		8E13563613621BC90038C749 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F428CAEA1362C01600B93651 /* CoreLocation.framework */,
 				8E13563713621BC90038C749 /* UIKit.framework */,
 				8E13563913621BC90038C749 /* Foundation.framework */,
 				8E13563B13621BC90038C749 /* CoreGraphics.framework */,

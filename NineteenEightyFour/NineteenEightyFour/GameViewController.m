@@ -40,14 +40,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // go to North America
-    MKCoordinateRegion newRegion;
-    newRegion.center.latitude = 37.37;
-    newRegion.center.longitude = -96.24;
-    newRegion.span.latitudeDelta = 28.49;
-    newRegion.span.longitudeDelta = 31.025;
-    
-    [self.mapView setRegion:newRegion animated:NO];
+
+    // CLLocationManager permet la gestion de la position géographique de l'utilisateur
+	locationManager=[[CLLocationManager alloc] init];
+	[locationManager setDelegate:self];
+	[locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+	[locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+	MKCoordinateRegion region;
+	region.center = newLocation.coordinate;;
+	region.span.latitudeDelta = .001;
+	region.span.longitudeDelta = .001;
+	[mapView setRegion:region animated:TRUE];
 }
 
 - (void)viewDidUnload
@@ -55,6 +61,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [locationManager release], locationManager = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
