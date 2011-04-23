@@ -18,11 +18,13 @@
 		8E13565313621BCA0038C749 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563913621BC90038C749 /* Foundation.framework */; };
 		8E13565413621BCA0038C749 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13563B13621BC90038C749 /* CoreGraphics.framework */; };
 		8E13565C13621BCA0038C749 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E13565A13621BCA0038C749 /* InfoPlist.strings */; };
-		8E13565F13621BCA0038C749 /* NineteenEightyFourTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 8E13565E13621BCA0038C749 /* NineteenEightyFourTests.h */; };
-		8E13566113621BCA0038C749 /* NineteenEightyFourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E13566013621BCA0038C749 /* NineteenEightyFourTests.m */; };
 		8E13566D1362210E0038C749 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13566C1362210E0038C749 /* MapKit.framework */; };
 		8E49DEC51362D5C10020D931 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E49DEC41362D5C10020D931 /* Icon.png */; };
 		F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F428CAEA1362C01600B93651 /* CoreLocation.framework */; };
+		F4547A641362E3DE00D39F65 /* CameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A631362E3DE00D39F65 /* CameraTests.m */; };
+		F4547A681362E62200D39F65 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A671362E62200D39F65 /* Camera.m */; };
+		F4547A691362E62200D39F65 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A671362E62200D39F65 /* Camera.m */; };
+		F4547A6A1362E65800D39F65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F428CAEA1362C01600B93651 /* CoreLocation.framework */; };
 		F46B85311362356600B56B4A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B852F1362356600B56B4A /* GameViewController.m */; };
 		F46B85321362356600B56B4A /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B85301362356600B56B4A /* GameViewController.xib */; };
 /* End PBXBuildFile section */
@@ -53,11 +55,12 @@
 		8E13565913621BCA0038C749 /* NineteenEightyFourTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NineteenEightyFourTests-Info.plist"; sourceTree = "<group>"; };
 		8E13565B13621BCA0038C749 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8E13565D13621BCA0038C749 /* NineteenEightyFourTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NineteenEightyFourTests-Prefix.pch"; sourceTree = "<group>"; };
-		8E13565E13621BCA0038C749 /* NineteenEightyFourTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NineteenEightyFourTests.h; sourceTree = "<group>"; };
-		8E13566013621BCA0038C749 /* NineteenEightyFourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineteenEightyFourTests.m; sourceTree = "<group>"; };
 		8E13566C1362210E0038C749 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8E49DEC41362D5C10020D931 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F428CAEA1362C01600B93651 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F4547A631362E3DE00D39F65 /* CameraTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTests.m; sourceTree = "<group>"; };
+		F4547A661362E62200D39F65 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		F4547A671362E62200D39F65 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
 		F46B852E1362356600B56B4A /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		F46B852F1362356600B56B4A /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		F46B85301362356600B56B4A /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 				8E13565213621BCA0038C749 /* UIKit.framework in Frameworks */,
 				8E13565313621BCA0038C749 /* Foundation.framework in Frameworks */,
 				8E13565413621BCA0038C749 /* CoreGraphics.framework in Frameworks */,
+				F4547A6A1362E65800D39F65 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +135,8 @@
 				F46B852F1362356600B56B4A /* GameViewController.m */,
 				F46B85301362356600B56B4A /* GameViewController.xib */,
 				8E49DEC21362D57F0020D931 /* Resources */,
+				F4547A661362E62200D39F65 /* Camera.h */,
+				F4547A671362E62200D39F65 /* Camera.m */,
 			);
 			path = NineteenEightyFour;
 			sourceTree = "<group>";
@@ -149,9 +155,8 @@
 		8E13565713621BCA0038C749 /* NineteenEightyFourTests */ = {
 			isa = PBXGroup;
 			children = (
-				8E13565E13621BCA0038C749 /* NineteenEightyFourTests.h */,
-				8E13566013621BCA0038C749 /* NineteenEightyFourTests.m */,
 				8E13565813621BCA0038C749 /* Supporting Files */,
+				F4547A631362E3DE00D39F65 /* CameraTests.m */,
 			);
 			path = NineteenEightyFourTests;
 			sourceTree = "<group>";
@@ -256,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E13565C13621BCA0038C749 /* InfoPlist.strings in Resources */,
-				8E13565F13621BCA0038C749 /* NineteenEightyFourTests.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +290,7 @@
 				8E13564513621BC90038C749 /* main.m in Sources */,
 				8E13564813621BC90038C749 /* NineteenEightyFourAppDelegate.m in Sources */,
 				F46B85311362356600B56B4A /* GameViewController.m in Sources */,
+				F4547A681362E62200D39F65 /* Camera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E13566113621BCA0038C749 /* NineteenEightyFourTests.m in Sources */,
+				F4547A641362E3DE00D39F65 /* CameraTests.m in Sources */,
+				F4547A691362E62200D39F65 /* Camera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
