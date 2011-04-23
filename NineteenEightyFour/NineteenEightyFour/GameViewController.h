@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GameViewController : UIViewController {
+@interface GameViewController : UIViewController<CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
