@@ -8,10 +8,10 @@
 
 #import "GameViewController.h"
 
-
 @implementation GameViewController
 
 @synthesize mapView;
+@synthesize camera;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,17 +54,35 @@
 {
     CLLocationCoordinate2D cameraPosition = CLLocationCoordinate2DMake(48.870562, 2.342624);
     CLLocationDistance cameraRadius = 30.0;
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:cameraPosition radius:cameraRadius];
+    self.camera = [Camera cameraWithPosition:cameraPosition andRadius:cameraRadius];
+    
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:self.camera.position.coordinate radius:self.camera.radius];
     [mapView addOverlay:circle];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
+    CLLocationCoordinate2D coordinate = newLocation.coordinate;
+    
+#if TARGET_IPHONE_SIMULATOR
+    coordinate = CLLocationCoordinate2DMake(48.870062, 2.342624);
+#endif
+    
 	MKCoordinateRegion region;
-	region.center = newLocation.coordinate;
+	region.center = coordinate;
 	region.span.latitudeDelta = .001;
 	region.span.longitudeDelta = .001;
 	[mapView setRegion:region animated:TRUE];
+
+    lastPosition = coordinate;
+    id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
+    MKCircleView *theOverlayView = (MKCircleView *)[mapView viewForOverlay:theOverlay];
+    if ([camera seesPoint:lastPosition]) {
+        theOverlayView.fillColor = [UIColor colorWithRed:1.0 green:0.0 blue:0 alpha:0.2];
+    } else {
+        theOverlayView.fillColor = [UIColor clearColor];
+    }
+    [theOverlayView setNeedsDisplay];
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
@@ -72,7 +90,6 @@
     MKCircleView *circleView = [[[MKCircleView alloc ] initWithCircle:overlay] autorelease];
     circleView.strokeColor = [UIColor redColor];
     circleView.lineWidth = 3.0;
-    circleView.fillColor = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:0.2];
     return circleView;
 }
 
