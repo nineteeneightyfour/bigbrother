@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/iphone-api/!svn/ver/202/examples/trunk/DisplayTheMap
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/iphone-api/!svn/ver/127/examples/trunk/DisplayTheMap/main.m
+END
+iPhoneSimulator.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/iphone-api/!svn/ver/179/examples/trunk/DisplayTheMap/iPhoneSimulator.xcconfig
+END
+DisplayTheMapViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/iphone-api/!svn/ver/127/examples/trunk/DisplayTheMap/DisplayTheMapViewController.xib
+END
+DisplayTheMap-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/iphone-api/!svn/ver/202/examples/trunk/DisplayTheMap/DisplayTheMap-Info.plist
+END
+DisplayTheMap_Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/iphone-api/!svn/ver/127/examples/trunk/DisplayTheMap/DisplayTheMap_Prefix.pch
+END
+MainWindow.xib
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/iphone-api/!svn/ver/127/examples/trunk/DisplayTheMap/MainWindow.xib
+END

@@ -1,0 +1,243 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* DisplayTheMap */ = {
+		activeExec = 0;
+		executables = (
+			CEBA338C10A957F700F5AF38 /* DisplayTheMap */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* DisplayTheMapViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 537}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 300}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* DisplayTheMapViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1092, 1320}}";
+			sepNavSelRange = "{2430, 0}";
+			sepNavVisRange = "{1686, 753}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = CEBA338C10A957F700F5AF38 /* DisplayTheMap */;
+		activeSDKPreference = iphonesimulator4.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* DisplayTheMap */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* DisplayTheMap */,
+		);
+		codeSenseManager = CEBA339210A9581F00F5AF38 /* Code sense */;
+		executables = (
+			CEBA338C10A957F700F5AF38 /* DisplayTheMap */,
+			CE4DDCC211E749BF00D376E6 /* DisplayTheMap-iPad */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					643.58349609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					834,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					137,
+					724.20849609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					794,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 304500141;
+			PBXWorkspaceStateSaveDate = 304500141;
+		};
+		perUserProjectItems = {
+			CE0C1BB411771C3C004D48AE /* PBXTextBookmark */ = CE0C1BB411771C3C004D48AE /* PBXTextBookmark */;
+			CE774F2A12264F1A0081B19F /* PBXTextBookmark */ = CE774F2A12264F1A0081B19F /* PBXTextBookmark */;
+			CECCF31710B3F01500863511 /* PBXTextBookmark */ = CECCF31710B3F01500863511 /* PBXTextBookmark */;
+			CEDC95E7120943900044B467 /* PBXTextBookmark */ = CEDC95E7120943900044B467 /* PBXTextBookmark */;
+		};
+		sourceControlManager = CEBA339110A9581F00F5AF38 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 525}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 360}";
+		};
+	};
+	CE0C1BB411771C3C004D48AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 360;
+		vrLoc = 0;
+	};
+	CE4DDCAE11E749BF00D376E6 /* DisplayTheMap-iPad */ = {
+		activeExec = 0;
+		executables = (
+			CE4DDCC211E749BF00D376E6 /* DisplayTheMap-iPad */,
+		);
+	};
+	CE4DDCC211E749BF00D376E6 /* DisplayTheMap-iPad */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "DisplayTheMap-iPad";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	CE774F2A12264F1A0081B19F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* DisplayTheMapViewController.m */;
+		name = "DisplayTheMapViewController.m: 85";
+		rLen = 0;
+		rLoc = 2430;
+		rType = 0;
+		vrLen = 753;
+		vrLoc = 1686;
+	};
+	CEBA338C10A957F700F5AF38 /* DisplayTheMap */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = DisplayTheMap;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	CEBA339110A9581F00F5AF38 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	CEBA339210A9581F00F5AF38 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	CECCF31710B3F01500863511 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* DisplayTheMapViewController.h */;
+		name = "DisplayTheMapViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 300;
+		vrLoc = 0;
+	};
+	CEDC95E7120943900044B467 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* DisplayTheMapViewController.m */;
+		name = "DisplayTheMapViewController.m: 85";
+		rLen = 0;
+		rLoc = 2430;
+		rType = 0;
+		vrLen = 753;
+		vrLoc = 1686;
+	};
+}

@@ -2,6 +2,9 @@
 #import "CameraOverlayView.h"
 #import "CameraOverlay.h"
 
+const CLLocationDegrees kLatitudeDelta = .0034;
+
+
 @implementation GameViewController
 
 @synthesize mapView;
@@ -88,8 +91,8 @@
 {
     MKCoordinateRegion region;
 	region.center = coordinate;
-	region.span.latitudeDelta = .001;
-	region.span.longitudeDelta = .001;
+	region.span.latitudeDelta = kLatitudeDelta;
+	region.span.longitudeDelta = kLatitudeDelta;
 	[mapView setRegion:region animated:TRUE];
     
     lastPosition = coordinate;

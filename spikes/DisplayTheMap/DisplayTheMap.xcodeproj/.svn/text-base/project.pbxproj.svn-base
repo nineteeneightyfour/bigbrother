@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* DisplayTheMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DisplayTheMapAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* DisplayTheMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* DisplayTheMapViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* DisplayTheMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* DisplayTheMapViewController.m */; };
+		CE4DDCB411E749BF00D376E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		CE4DDCB511E749BF00D376E6 /* DisplayTheMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DisplayTheMapAppDelegate.m */; };
+		CE4DDCB611E749BF00D376E6 /* DisplayTheMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* DisplayTheMapViewController.m */; };
+		CE4DDCB811E749BF00D376E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		CE4DDCB911E749BF00D376E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		CE4DDCBA11E749BF00D376E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		CE4DDCBB11E749BF00D376E6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5A38AC10A974FC00D6CA67 /* libsqlite3.dylib */; };
+		CE4DDCBC11E749BF00D376E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5A38D110A9758200D6CA67 /* QuartzCore.framework */; };
+		CE4DDCBD11E749BF00D376E6 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE739127113D74BA007C3B11 /* libstdc++.6.dylib */; };
+		CE4DDCC611E749C000D376E6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4DDCC411E749C000D376E6 /* MainWindow.xib */; };
+		CE4DDCC711E749C000D376E6 /* DisplayTheMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4DDCC511E749C000D376E6 /* DisplayTheMapViewController.xib */; };
+		CE5A38AD10A974FC00D6CA67 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5A38AC10A974FC00D6CA67 /* libsqlite3.dylib */; };
+		CE5A38D210A9758200D6CA67 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5A38D110A9758200D6CA67 /* QuartzCore.framework */; };
+		CE739128113D74BA007C3B11 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE739127113D74BA007C3B11 /* libstdc++.6.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* DisplayTheMapAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTheMapAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* DisplayTheMapAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayTheMapAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* DisplayTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisplayTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* DisplayTheMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayTheMapViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* DisplayTheMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTheMapViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* DisplayTheMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayTheMapViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* DisplayTheMap_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTheMap_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* DisplayTheMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DisplayTheMap-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CE4DDCC111E749BF00D376E6 /* DisplayTheMap-Upgraded.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DisplayTheMap-Upgraded.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4DDCC411E749C000D376E6 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = "Resources-iPad/MainWindow.xib"; sourceTree = "<group>"; };
+		CE4DDCC511E749C000D376E6 /* DisplayTheMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DisplayTheMapViewController.xib; path = "Resources-iPad/DisplayTheMapViewController.xib"; sourceTree = "<group>"; };
+		CE5A38AC10A974FC00D6CA67 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CE5A38D110A9758200D6CA67 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE739127113D74BA007C3B11 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				CE5A38AD10A974FC00D6CA67 /* libsqlite3.dylib in Frameworks */,
+				CE5A38D210A9758200D6CA67 /* QuartzCore.framework in Frameworks */,
+				CE739128113D74BA007C3B11 /* libstdc++.6.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4DDCB711E749BF00D376E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4DDCB811E749BF00D376E6 /* Foundation.framework in Frameworks */,
+				CE4DDCB911E749BF00D376E6 /* UIKit.framework in Frameworks */,
+				CE4DDCBA11E749BF00D376E6 /* CoreGraphics.framework in Frameworks */,
+				CE4DDCBB11E749BF00D376E6 /* libsqlite3.dylib in Frameworks */,
+				CE4DDCBC11E749BF00D376E6 /* QuartzCore.framework in Frameworks */,
+				CE4DDCBD11E749BF00D376E6 /* libstdc++.6.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* DisplayTheMapAppDelegate.h */,
+				1D3623250D0F684500981E51 /* DisplayTheMapAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* DisplayTheMapViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* DisplayTheMapViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* DisplayTheMap.app */,
+				CE4DDCC111E749BF00D376E6 /* DisplayTheMap-Upgraded.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				CE739127113D74BA007C3B11 /* libstdc++.6.dylib */,
+				CE5A38AC10A974FC00D6CA67 /* libsqlite3.dylib */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				CE4DDCC311E749BF00D376E6 /* Resources-iPad */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* DisplayTheMap_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E5210DE3E06400AC0155 /* DisplayTheMapViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* DisplayTheMap-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A38D110A9758200D6CA67 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4DDCC311E749BF00D376E6 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				CE4DDCC411E749C000D376E6 /* MainWindow.xib */,
+				CE4DDCC511E749C000D376E6 /* DisplayTheMapViewController.xib */,
+			);
+			name = "Resources-iPad";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* DisplayTheMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DisplayTheMap" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DisplayTheMap;
+			productName = DisplayTheMap;
+			productReference = 1D6058910D05DD3D006BFB54 /* DisplayTheMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE4DDCAE11E749BF00D376E6 /* DisplayTheMap-iPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4DDCBE11E749BF00D376E6 /* Build configuration list for PBXNativeTarget "DisplayTheMap-iPad" */;
+			buildPhases = (
+				CE4DDCAF11E749BF00D376E6 /* Resources */,
+				CE4DDCB311E749BF00D376E6 /* Sources */,
+				CE4DDCB711E749BF00D376E6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DisplayTheMap-iPad";
+			productName = DisplayTheMap;
+			productReference = CE4DDCC111E749BF00D376E6 /* DisplayTheMap-Upgraded.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DisplayTheMap" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* DisplayTheMap */,
+				CE4DDCAE11E749BF00D376E6 /* DisplayTheMap-iPad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* DisplayTheMapViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4DDCAF11E749BF00D376E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4DDCC611E749C000D376E6 /* MainWindow.xib in Resources */,
+				CE4DDCC711E749C000D376E6 /* DisplayTheMapViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* DisplayTheMapAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* DisplayTheMapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4DDCB311E749BF00D376E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4DDCB411E749BF00D376E6 /* main.m in Sources */,
+				CE4DDCB511E749BF00D376E6 /* DisplayTheMapAppDelegate.m in Sources */,
+				CE4DDCB611E749BF00D376E6 /* DisplayTheMapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dmytro Golub (EQ99MDFH9A)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DisplayTheMap_Prefix.pch;
+				INFOPLIST_FILE = "DisplayTheMap-Info.plist";
+				PRODUCT_NAME = DisplayTheMap;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7879DD2F-0FB3-4377-A7AF-82B75C516930";
+				SDKROOT = iphonesimulator4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dmytro Golub (EQ99MDFH9A)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DisplayTheMap_Prefix.pch;
+				INFOPLIST_FILE = "DisplayTheMap-Info.plist";
+				PRODUCT_NAME = DisplayTheMap;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7879DD2F-0FB3-4377-A7AF-82B75C516930";
+				SDKROOT = iphonesimulator4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/inc/CloudMade",
+					"$(SRCROOT)/inc/Proj4",
+					"$(SRCROOT)/inc/route-me",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = (
+					"$(SRCROOT)/libs/Proj4",
+					"$(SRCROOT)/libs/CloudMade",
+					"$(SRCROOT)/libs/route-me",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = (
+					"$(SRCROOT)/libs/Proj4",
+					"$(SRCROOT)/libs/CloudMade",
+					"$(SRCROOT)/libs/route-me",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
+					"-ObjC",
+					"-lCloudMadeApi",
+					"-lMapView",
+					"-lProj4",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
+					"-ObjC",
+					"-lCloudMadeApi",
+					"-lMapView",
+					"-lProj4",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/inc/CloudMade",
+					"$(SRCROOT)/inc/Proj4",
+					"$(SRCROOT)/inc/route-me",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = (
+					"$(SRCROOT)/libs/Proj4",
+					"$(SRCROOT)/libs/CloudMade",
+					"$(SRCROOT)/libs/route-me",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = (
+					"$(SRCROOT)/libs/Proj4",
+					"$(SRCROOT)/libs/CloudMade",
+					"$(SRCROOT)/libs/route-me",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
+					"-ObjC",
+					"-lCloudMadeApi",
+					"-lMapView",
+					"-lProj4",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
+					"-ObjC",
+					"-lCloudMadeApi",
+					"-lMapView",
+					"-lProj4",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		CE4DDCBF11E749BF00D376E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dmytro Golub (EQ99MDFH9A)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DisplayTheMap_Prefix.pch;
+				INFOPLIST_FILE = "DisplayTheMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "DisplayTheMap-Upgraded";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7879DD2F-0FB3-4377-A7AF-82B75C516930";
+				SDKROOT = iphonesimulator3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CE4DDCC011E749BF00D376E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dmytro Golub (EQ99MDFH9A)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DisplayTheMap_Prefix.pch;
+				INFOPLIST_FILE = "DisplayTheMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "DisplayTheMap-Upgraded";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7879DD2F-0FB3-4377-A7AF-82B75C516930";
+				SDKROOT = iphonesimulator3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DisplayTheMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DisplayTheMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4DDCBE11E749BF00D376E6 /* Build configuration list for PBXNativeTarget "DisplayTheMap-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4DDCBF11E749BF00D376E6 /* Debug */,
+				CE4DDCC011E749BF00D376E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
