@@ -3,6 +3,7 @@
     
 }
 @property (nonatomic) CLLocationCoordinate2D position;
+@property (nonatomic) CLLocationDistance radius;
 
 + (Camera *)cameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius;
 
