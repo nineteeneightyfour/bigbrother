@@ -52,9 +52,15 @@
     [self createCamera];
 
 #if TARGET_IPHONE_SIMULATOR
-    [self playerMovedTo:CLLocationCoordinate2DMake(48.870462, 2.342624)];
+    [self playerMovedTo:CLLocationCoordinate2DMake(48.870262, 2.342624)];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 #endif
 
+}
+
+- (void)tick
+{
+    [self playerMovedTo:CLLocationCoordinate2DMake(lastPosition.latitude + 0.000001, lastPosition.longitude)];
 }
 
 - (void)createCamera
