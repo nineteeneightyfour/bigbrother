@@ -19,7 +19,7 @@ const CLLocationDegrees kLatitudeDelta = .002;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        spottingCamera = nil;
     }
     return self;
 }
@@ -88,9 +88,13 @@ const CLLocationDegrees kLatitudeDelta = .002;
     
     BOOL isSpotted = false;
     for (Camera *camera in cameras) {
+        if (camera.isHacked) {
+            continue;
+        }
         camera.isSpotting = [camera seesPoint:lastPosition];
         if (camera.isSpotting) {
             isSpotted = YES;
+            spottingCamera = camera;
         }
     }
     
@@ -195,6 +199,8 @@ const CLLocationDegrees kLatitudeDelta = .002;
     moviePlayer.controlStyle = MPMovieControlStyleNone;
 
     [self presentMoviePlayerViewControllerAnimated:self.moviePlayerController];
+    
+    spottingCamera.isHacked = YES;
 }
 
 @end

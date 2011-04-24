@@ -5,6 +5,7 @@
     CLLocationCoordinate2D lastPosition;
     NSTimer* timer;
     NSMutableArray *cameras;
+    Camera *spottingCamera;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;

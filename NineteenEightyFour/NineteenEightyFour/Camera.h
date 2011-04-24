@@ -6,6 +6,7 @@
 @property (nonatomic) CLLocationDistance radius;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic) BOOL isSpotting;
+@property (nonatomic) BOOL isHacked;
 
 + (Camera *)cameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius;
 

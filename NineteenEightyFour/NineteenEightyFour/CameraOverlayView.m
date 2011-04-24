@@ -42,17 +42,21 @@
         
         CGRect cameraCGRect = [self rectForMapRect:cameraMapRect];
 
-        if (camera.isSpotting) {
+        if (camera.isHacked) {
+            CGContextSetRGBFillColor(context, 1,1,1,0.1);
+        } else if (camera.isSpotting) {
             CGContextSetRGBFillColor(context, 1,0,0,0.6);
         } else {
             CGContextSetRGBFillColor(context, 1,1,1,0.6);
         }
         CGContextFillEllipseInRect(context, cameraCGRect);
         
-        CGPoint oeilPoint = [self pointForMapPoint:mapCentre];
-        CGSize oeilSize = oeil.size;
-        CGRect oeilRect = CGRectMake(oeilPoint.x - oeilSize.width, oeilPoint.y - oeilSize.height, oeilSize.width * 2, oeilSize.height * 2);
-        CGContextDrawImage(context, oeilRect, oeil.CGImage);
+        if (!camera.isHacked) {
+            CGPoint oeilPoint = [self pointForMapPoint:mapCentre];
+            CGSize oeilSize = oeil.size;
+            CGRect oeilRect = CGRectMake(oeilPoint.x - oeilSize.width, oeilPoint.y - oeilSize.height, oeilSize.width * 2, oeilSize.height * 2);
+            CGContextDrawImage(context, oeilRect, oeil.CGImage);
+        }
     }
 }
 

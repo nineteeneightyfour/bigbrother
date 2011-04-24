@@ -6,6 +6,7 @@
 @synthesize position;
 @synthesize radius;
 @synthesize isSpotting;
+@synthesize isHacked;
 
 - (CLLocationCoordinate2D)coordinate
 {
@@ -23,6 +24,8 @@
     if (self) {
         self.position = [[[CLLocation alloc] initWithLatitude:cameraPosition.latitude longitude:cameraPosition.longitude] autorelease];
         self.radius = cameraRadius;
+        self.isSpotting = NO;
+        self.isHacked = NO;
     }
     return self;
     
