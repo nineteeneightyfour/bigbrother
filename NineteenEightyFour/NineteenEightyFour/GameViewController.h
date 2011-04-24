@@ -16,7 +16,7 @@
 - (void)tick;
 - (void)addCameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius;
 
-- (AVAudioPlayer*)makeAudioPlayer:(NSString*)path ofType:(NSString*)type;
+- (AVAudioPlayer*)makeAudioPlayer:(NSString*)path ofType:(NSString*)type withVolume:(float) volume;
 
 
 @end

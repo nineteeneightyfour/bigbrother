@@ -40,9 +40,8 @@ const CLLocationDegrees kLatitudeDelta = .002;
 {
     [super viewDidLoad];
 
-    self.appGameLoopSoundPlayer = [self makeAudioPlayer:@"son_game" ofType:@"wav"];
-    self.spottedLoopSoundPlayer = [self makeAudioPlayer:@"son_alerte" ofType:@"wav"];
-    [appGameLoopSoundPlayer play];
+    self.appGameLoopSoundPlayer = [self makeAudioPlayer:@"son_game" ofType:@"wav" withVolume:1.0];
+    self.spottedLoopSoundPlayer = [self makeAudioPlayer:@"son_alerte" ofType:@"wav" withVolume:0.0];
 
 
 #if !TARGET_IPHONE_SIMULATOR
@@ -119,11 +118,11 @@ const CLLocationDegrees kLatitudeDelta = .002;
     }
     
     if (isSpotted) {
-        [self.appGameLoopSoundPlayer stop];
-        [self.spottedLoopSoundPlayer play];
+        [self.appGameLoopSoundPlayer setVolume:0.0];
+        [self.spottedLoopSoundPlayer setVolume:1.0];
     } else {
-        [self.appGameLoopSoundPlayer play];
-        [self.spottedLoopSoundPlayer stop];
+        [self.appGameLoopSoundPlayer setVolume:1.0];
+        [self.spottedLoopSoundPlayer setVolume:0.0];
     }
 
     id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
@@ -151,13 +150,14 @@ const CLLocationDegrees kLatitudeDelta = .002;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (AVAudioPlayer*)makeAudioPlayer:(NSString*)path ofType:(NSString*)type
+- (AVAudioPlayer*)makeAudioPlayer:(NSString*)path ofType:(NSString*)type withVolume:(float) volume
 {
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: path ofType: type];
     NSURL *soundFileURL = [[[NSURL alloc] initFileURLWithPath: soundFilePath] autorelease];
 	AVAudioPlayer *audioPLayer = [[[AVAudioPlayer alloc] initWithContentsOfURL: soundFileURL error: nil] autorelease];
-    [audioPLayer setVolume: 1.0];
+    [audioPLayer setVolume: volume];
     [audioPLayer setNumberOfLoops: -1];
+    [audioPLayer play];
     return audioPLayer;
 }
 
