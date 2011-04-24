@@ -9,6 +9,7 @@
     self = [super initWithOverlay:overlay];
     if (self) {
         oeil = [[UIImage imageNamed:@"oeil"] retain];
+        oeil_out = [[UIImage imageNamed:@"oeil_out"] retain];
         player = [[UIImage imageNamed:@"player"] retain];
     }
     return self;
@@ -17,6 +18,7 @@
 - (void)dealloc
 {
     [oeil release], oeil = nil;
+    [oeil_out release], oeil_out = nil;
     [player release], player = nil;
     [super dealloc];
 }
@@ -45,7 +47,7 @@
         CGRect cameraCGRect = [self rectForMapRect:cameraMapRect];
 
         if (camera.isHacked) {
-            CGContextSetRGBFillColor(context, 1,1,1,0.1);
+            CGContextSetRGBFillColor(context, 0,1,0,0.3);
         } else if (camera.isSpotting) {
             CGContextSetRGBFillColor(context, 1,0,0,0.6);
         } else {
@@ -53,12 +55,12 @@
         }
         CGContextFillEllipseInRect(context, cameraCGRect);
         
-        if (!camera.isHacked) {
-            CGPoint oeilPoint = [self pointForMapPoint:mapCentre];
-            CGSize oeilSize = oeil.size;
-            CGRect oeilRect = CGRectMake(oeilPoint.x - oeilSize.width, oeilPoint.y - oeilSize.height, oeilSize.width * 2, oeilSize.height * 2);
-            CGContextDrawImage(context, oeilRect, oeil.CGImage);
-        }
+        CGPoint oeilPoint = [self pointForMapPoint:mapCentre];
+        UIImage *oeilImage = camera.isHacked?oeil_out:oeil;
+        CGSize oeilSize = oeilImage.size;
+        CGRect oeilRect = CGRectMake(oeilPoint.x - oeilSize.width, oeilPoint.y - oeilSize.height,
+                                     oeilSize.width * 2, oeilSize.height * 2);
+        CGContextDrawImage(context, oeilRect, oeilImage.CGImage);
     }
     
     // dessine le joueur

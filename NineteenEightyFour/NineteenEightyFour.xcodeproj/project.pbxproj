@@ -28,6 +28,8 @@
 		8E34265213641B51009DE2DE /* cameras.kml in Resources */ = {isa = PBXBuildFile; fileRef = 8E34265113641B51009DE2DE /* cameras.kml */; };
 		8E34265413642697009DE2DE /* vignette_rouge.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E34265313642697009DE2DE /* vignette_rouge.png */; };
 		8E34265613642B49009DE2DE /* hack.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 8E34265513642B49009DE2DE /* hack.m4v */; };
+		8E6B928313644A6D00B2C0C7 /* oeil_out.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B928213644A6D00B2C0C7 /* oeil_out.png */; };
+		8E6B928613644B2400B2C0C7 /* hack.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6B928513644B2400B2C0C7 /* hack.png */; };
 		8EB39298136367B700E96B04 /* CameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB39297136367B600E96B04 /* CameraOverlayView.m */; };
 		8EB392A513636F5900E96B04 /* CameraOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB392A413636F5900E96B04 /* CameraOverlay.m */; };
 		8EB392A713637A5100E96B04 /* oeil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB392A613637A5100E96B04 /* oeil.png */; };
@@ -86,6 +88,8 @@
 		8E34265113641B51009DE2DE /* cameras.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cameras.kml; sourceTree = "<group>"; };
 		8E34265313642697009DE2DE /* vignette_rouge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vignette_rouge.png; sourceTree = "<group>"; };
 		8E34265513642B49009DE2DE /* hack.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hack.m4v; sourceTree = "<group>"; };
+		8E6B928213644A6D00B2C0C7 /* oeil_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oeil_out.png; sourceTree = "<group>"; };
+		8E6B928513644B2400B2C0C7 /* hack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hack.png; sourceTree = "<group>"; };
 		8EB39296136367B600E96B04 /* CameraOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlayView.h; sourceTree = "<group>"; };
 		8EB39297136367B600E96B04 /* CameraOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlayView.m; sourceTree = "<group>"; };
 		8EB392A313636F5900E96B04 /* CameraOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlay.h; sourceTree = "<group>"; };
@@ -231,8 +235,8 @@
 		8E49DEC21362D57F0020D931 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E6B928513644B2400B2C0C7 /* hack.png */,
 				8E34265513642B49009DE2DE /* hack.m4v */,
-				8E34265313642697009DE2DE /* vignette_rouge.png */,
 				8E34265113641B51009DE2DE /* cameras.kml */,
 				F4D60EC41364179700150BE4 /* son_alerte.wav */,
 				F42961691364320F0057E42D /* player.png */,
@@ -244,7 +248,9 @@
 				F41938DC136398A7000FF869 /* intro.wav */,
 				8E1C8E39136338020081C5F7 /* iTunesArtwork */,
 				8EB392A613637A5100E96B04 /* oeil.png */,
+				8E6B928213644A6D00B2C0C7 /* oeil_out.png */,
 				8E1C8E0113632D5D0081C5F7 /* vignette.png */,
+				8E34265313642697009DE2DE /* vignette_rouge.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -337,6 +343,8 @@
 				8E34265413642697009DE2DE /* vignette_rouge.png in Resources */,
 				8E34265613642B49009DE2DE /* hack.m4v in Resources */,
 				F429616A1364320F0057E42D /* player.png in Resources */,
+				8E6B928313644A6D00B2C0C7 /* oeil_out.png in Resources */,
+				8E6B928613644B2400B2C0C7 /* hack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
