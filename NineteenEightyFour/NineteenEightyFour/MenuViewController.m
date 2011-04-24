@@ -1,8 +1,9 @@
 #import "MenuViewController.h"
 #import "GameViewController.h"
-#import <AVFoundation/AVFoundation.h>
 
 @implementation MenuViewController
+
+@synthesize appSoundPlayer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -18,9 +19,8 @@
 
     [self presentModalViewController:gameController animated:YES];
     
-/*    UIWindow *window = [self.view window];
-    
-    window.rootViewController = gameController;*/
+    [appSoundPlayer release], appSoundPlayer = nil;
+    [self playSound:@"son_game" ofType:@"wav"];
 }
 
 - (void)dealloc
@@ -42,10 +42,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSLog(@"isPrepareOK");
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"intro" ofType: @"wav"];
+    [self playSound:@"intro" ofType:@"wav"];
+}
+
+- (void)playSound:(NSString*)path ofType:(NSString*)type
+{
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: path ofType: type];
     NSURL *soundFileURL = [[[NSURL alloc] initFileURLWithPath: soundFilePath] autorelease];
-    AVAudioPlayer *appSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: soundFileURL error: nil];
+	self.appSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: soundFileURL error: nil];;
+    [self.appSoundPlayer release];
     [appSoundPlayer setVolume: 1.0];
     [appSoundPlayer setNumberOfLoops: -1];
     [appSoundPlayer play];

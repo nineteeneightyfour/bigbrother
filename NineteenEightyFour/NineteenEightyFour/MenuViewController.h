@@ -12,4 +12,10 @@
 @interface MenuViewController : UIViewController {
 }
 - (IBAction)startGame;
+
+@property (nonatomic, retain)	AVAudioPlayer			*appSoundPlayer;
+
+- (void)playSound:(NSString*)path ofType:(NSString*)type;
+
+
 @end
