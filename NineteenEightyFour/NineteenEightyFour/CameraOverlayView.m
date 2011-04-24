@@ -47,7 +47,7 @@
         
         CGPoint oeilPoint = [self pointForMapPoint:mapCentre];
         CGSize oeilSize = oeil.size;
-        CGRect oeilRect = CGRectMake(oeilPoint.x - oeilSize.width/2, oeilPoint.y - oeilSize.height / 2, oeilSize.width, oeilSize.height);
+        CGRect oeilRect = CGRectMake(oeilPoint.x - oeilSize.width, oeilPoint.y - oeilSize.height, oeilSize.width * 2, oeilSize.height * 2);
         CGContextDrawImage(context, oeilRect, oeil.CGImage);
     }
 }
