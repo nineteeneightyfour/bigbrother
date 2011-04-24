@@ -48,6 +48,7 @@
 		F49D2BD31363854E00DABCFE /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49D2BD11363854E00DABCFE /* MenuViewController.m */; };
 		F49D2BD41363854E00DABCFE /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49D2BD21363854E00DABCFE /* MenuViewController.xib */; };
 		F49D2BD913638E5D00DABCFE /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F49D2BD813638E5D00DABCFE /* home.png */; };
+		F4B859A713644C0300D0ABED /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B859A613644C0300D0ABED /* AudioToolbox.framework */; };
 		F4D60EC51364179700150BE4 /* son_alerte.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4D60EC41364179700150BE4 /* son_alerte.wav */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		F49D2BD11363854E00DABCFE /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F49D2BD21363854E00DABCFE /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		F49D2BD813638E5D00DABCFE /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		F4B859A613644C0300D0ABED /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F4D60EC41364179700150BE4 /* son_alerte.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = son_alerte.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B859A713644C0300D0ABED /* AudioToolbox.framework in Frameworks */,
 				8E2DBBB013640C8B00F582DD /* MediaPlayer.framework in Frameworks */,
 				F41938E013639A15000FF869 /* AVFoundation.framework in Frameworks */,
 				F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */,
@@ -165,6 +168,7 @@
 		8E13563613621BC90038C749 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4B859A613644C0300D0ABED /* AudioToolbox.framework */,
 				8E2DBBAF13640C8B00F582DD /* MediaPlayer.framework */,
 				F41938DF13639A15000FF869 /* AVFoundation.framework */,
 				F428CAEA1362C01600B93651 /* CoreLocation.framework */,
