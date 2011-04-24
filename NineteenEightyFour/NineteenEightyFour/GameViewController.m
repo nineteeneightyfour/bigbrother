@@ -9,6 +9,7 @@ const CLLocationDegrees kLatitudeDelta = .002;
 @implementation GameViewController
 
 @synthesize mapView;
+@synthesize vignette;
 @synthesize appGameLoopSoundPlayer;
 @synthesize spottedLoopSoundPlayer;
 
@@ -92,6 +93,12 @@ const CLLocationDegrees kLatitudeDelta = .002;
     } else {
         [self moveVolumeForPlay:appGameLoopSoundPlayer Toward:1.0];
         [self moveVolumeForPlay:spottedLoopSoundPlayer Toward:0.0];
+    }
+    
+    if (isSpotted) {
+        self.vignette.image = [UIImage imageNamed:@"vignette_rouge"];
+    } else {
+        self.vignette.image = [UIImage imageNamed:@"vignette"];
     }
     
     id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];

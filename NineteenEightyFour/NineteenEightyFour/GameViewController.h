@@ -8,6 +8,7 @@
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) IBOutlet UIImageView *vignette;
 @property (nonatomic, retain)	AVAudioPlayer			*appGameLoopSoundPlayer;
 @property (nonatomic, retain)	AVAudioPlayer			*spottedLoopSoundPlayer;
 
