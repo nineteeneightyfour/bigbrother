@@ -9,7 +9,7 @@
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) IBOutlet UIImageView *vignette;
-@property (nonatomic, retain) IBOutlet UISwitch *hackSwitch;
+@property (nonatomic, retain) IBOutlet UIView *hackSwitch;
 @property (nonatomic, retain)	AVAudioPlayer			*appGameLoopSoundPlayer;
 @property (nonatomic, retain)	AVAudioPlayer			*spottedLoopSoundPlayer;
 @property (nonatomic, retain)	MPMoviePlayerViewController *moviePlayerController;
