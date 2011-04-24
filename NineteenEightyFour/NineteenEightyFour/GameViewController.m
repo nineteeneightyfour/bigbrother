@@ -2,7 +2,7 @@
 #import "CameraOverlayView.h"
 #import "CameraOverlay.h"
 
-const CLLocationDegrees kLatitudeDelta = .0034;
+const CLLocationDegrees kLatitudeDelta = .002;
 
 
 @implementation GameViewController
@@ -63,10 +63,10 @@ const CLLocationDegrees kLatitudeDelta = .0034;
 
 - (void)createCameras
 {
-    CLLocationDistance cameraRadius = 30.0;
+    CLLocationDistance cameraRadius = 35.0;
 
     for (int i=0; i<2; i++) {
-        CLLocationCoordinate2D cameraPosition = CLLocationCoordinate2DMake(48.870062+i*0.0005, 2.342624);
+        CLLocationCoordinate2D cameraPosition = CLLocationCoordinate2DMake(48.870058+i*0.0008, 2.342756);
         [self addCameraWithPosition:cameraPosition andRadius:cameraRadius];
     }
 
