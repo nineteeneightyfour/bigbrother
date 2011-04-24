@@ -110,7 +110,8 @@ const CLLocationDegrees kLatitudeDelta = .002;
         self.hackSwitch.hidden = YES;
     }
     
-    id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
+    CameraOverlay *theOverlay = [[mapView overlays] objectAtIndex:0];
+    theOverlay.playerPosition = lastPosition;
     CameraOverlayView *theOverlayView = (CameraOverlayView *)[mapView viewForOverlay:theOverlay];
     [theOverlayView setNeedsDisplayInMapRect:MKMapRectWorld];
 

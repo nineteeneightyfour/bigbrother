@@ -9,6 +9,7 @@
     self = [super initWithOverlay:overlay];
     if (self) {
         oeil = [[UIImage imageNamed:@"oeil"] retain];
+        player = [[UIImage imageNamed:@"player"] retain];
     }
     return self;
 }
@@ -16,6 +17,7 @@
 - (void)dealloc
 {
     [oeil release], oeil = nil;
+    [player release], player = nil;
     [super dealloc];
 }
 
@@ -54,6 +56,15 @@
         CGRect oeilRect = CGRectMake(oeilPoint.x - oeilSize.width, oeilPoint.y - oeilSize.height, oeilSize.width * 2, oeilSize.height * 2);
         CGContextDrawImage(context, oeilRect, oeil.CGImage);
     }
+    
+    // dessine le joueur
+    MKMapPoint playerCentre = MKMapPointForCoordinate(cameraOverlay.playerPosition);
+    CGPoint playerPoint = [self pointForMapPoint:playerCentre];
+
+    CGSize playerSize = player.size;
+    CGRect playerRect = CGRectMake(playerPoint.x - playerSize.width, playerPoint.y - playerSize.height, playerSize.width * 2, playerSize.height * 2);
+CGContextDrawImage(context, playerRect, player.CGImage);
+
 }
 
 @end
