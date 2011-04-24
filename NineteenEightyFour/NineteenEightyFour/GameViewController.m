@@ -88,8 +88,8 @@ const CLLocationDegrees kLatitudeDelta = .002;
     
     BOOL isSpotted = false;
     for (Camera *camera in cameras) {
-        camera.isActive = [camera seesPoint:lastPosition];
-        if (camera.isActive) {
+        camera.isSpotting = [camera seesPoint:lastPosition];
+        if (camera.isSpotting) {
             isSpotted = YES;
         }
     }

@@ -42,7 +42,7 @@
         
         CGRect cameraCGRect = [self rectForMapRect:cameraMapRect];
 
-        if (camera.isActive) {
+        if (camera.isSpotting) {
             CGContextSetRGBFillColor(context, 1,0,0,0.6);
         } else {
             CGContextSetRGBFillColor(context, 1,1,1,0.6);

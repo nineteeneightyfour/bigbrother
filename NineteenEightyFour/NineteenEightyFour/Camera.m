@@ -5,7 +5,7 @@
 
 @synthesize position;
 @synthesize radius;
-@synthesize isActive;
+@synthesize isSpotting;
 
 - (CLLocationCoordinate2D)coordinate
 {
