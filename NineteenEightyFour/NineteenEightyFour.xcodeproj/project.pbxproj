@@ -41,6 +41,7 @@
 		F49D2BD31363854E00DABCFE /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49D2BD11363854E00DABCFE /* MenuViewController.m */; };
 		F49D2BD41363854E00DABCFE /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49D2BD21363854E00DABCFE /* MenuViewController.xib */; };
 		F49D2BD913638E5D00DABCFE /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F49D2BD813638E5D00DABCFE /* home.png */; };
+		F4D60EC51364179700150BE4 /* son_alerte.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4D60EC41364179700150BE4 /* son_alerte.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		F49D2BD11363854E00DABCFE /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F49D2BD21363854E00DABCFE /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		F49D2BD813638E5D00DABCFE /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		F4D60EC41364179700150BE4 /* son_alerte.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = son_alerte.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +131,6 @@
 		8E13562813621BC80038C749 = {
 			isa = PBXGroup;
 			children = (
-				8E2DBBAF13640C8B00F582DD /* MediaPlayer.framework */,
 				8E13563D13621BC90038C749 /* NineteenEightyFour */,
 				8E13565713621BCA0038C749 /* NineteenEightyFourTests */,
 				8E13563613621BC90038C749 /* Frameworks */,
@@ -149,6 +150,7 @@
 		8E13563613621BC90038C749 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E2DBBAF13640C8B00F582DD /* MediaPlayer.framework */,
 				F41938DF13639A15000FF869 /* AVFoundation.framework */,
 				F428CAEA1362C01600B93651 /* CoreLocation.framework */,
 				8E13563713621BC90038C749 /* UIKit.framework */,
@@ -216,6 +218,7 @@
 		8E49DEC21362D57F0020D931 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4D60EC41364179700150BE4 /* son_alerte.wav */,
 				8EE2A80D13640378000A72B1 /* intro.m4v */,
 				F41938E11363A075000FF869 /* son_game.wav */,
 				F49D2BD813638E5D00DABCFE /* home.png */,
@@ -312,6 +315,7 @@
 				F41938DD136398A7000FF869 /* intro.wav in Resources */,
 				F41938E21363A075000FF869 /* son_game.wav in Resources */,
 				8EE2A80E13640378000A72B1 /* intro.m4v in Resources */,
+				F4D60EC51364179700150BE4 /* son_alerte.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

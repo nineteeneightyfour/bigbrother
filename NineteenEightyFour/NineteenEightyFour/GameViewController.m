@@ -8,7 +8,8 @@ const CLLocationDegrees kLatitudeDelta = .002;
 @implementation GameViewController
 
 @synthesize mapView;
-@synthesize appSoundPlayer;
+@synthesize appGameLoopSoundPlayer;
+@synthesize spottedLoopSoundPlayer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,7 +39,10 @@ const CLLocationDegrees kLatitudeDelta = .002;
 {
     [super viewDidLoad];
 
-    [self playSound:@"son_game" ofType:@"wav"];
+    self.appGameLoopSoundPlayer = [self makeAudioPlayer:@"son_game" ofType:@"wav"];
+    self.spottedLoopSoundPlayer = [self makeAudioPlayer:@"son_alerte" ofType:@"wav"];
+    [appGameLoopSoundPlayer play];
+
 
 #if !TARGET_IPHONE_SIMULATOR
     // CLLocationManager permet la gestion de la position géographique de l'utilisateur
@@ -100,8 +104,20 @@ const CLLocationDegrees kLatitudeDelta = .002;
     
     lastPosition = coordinate;
     
+    BOOL isSpotted = false;
     for (Camera *camera in cameras) {
         camera.isActive = [camera seesPoint:lastPosition];
+        if (camera.isActive) {
+            isSpotted = YES;
+        }
+    }
+    
+    if (isSpotted) {
+        [self.appGameLoopSoundPlayer stop];
+        [self.spottedLoopSoundPlayer play];
+    } else {
+        [self.appGameLoopSoundPlayer play];
+        [self.spottedLoopSoundPlayer stop];
     }
 
     id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
@@ -129,14 +145,14 @@ const CLLocationDegrees kLatitudeDelta = .002;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)playSound:(NSString*)path ofType:(NSString*)type
+- (AVAudioPlayer*)makeAudioPlayer:(NSString*)path ofType:(NSString*)type
 {
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: path ofType: type];
     NSURL *soundFileURL = [[[NSURL alloc] initFileURLWithPath: soundFilePath] autorelease];
-	self.appSoundPlayer = [[[AVAudioPlayer alloc] initWithContentsOfURL: soundFileURL error: nil] autorelease];
-    [appSoundPlayer setVolume: 1.0];
-    [appSoundPlayer setNumberOfLoops: -1];
-    [appSoundPlayer play];
+	AVAudioPlayer *audioPLayer = [[[AVAudioPlayer alloc] initWithContentsOfURL: soundFileURL error: nil] autorelease];
+    [audioPLayer setVolume: 1.0];
+    [audioPLayer setNumberOfLoops: -1];
+    return audioPLayer;
 }
 
 @end
