@@ -50,6 +50,8 @@ const CLLocationDegrees kLatitudeDelta = .002;
     
     self.moviePlayerController = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL fileURLWithPath:movpath]];
     
+    self.moviePlayerController.moviePlayer.shouldAutoplay = NO;
+    
 #if !TARGET_IPHONE_SIMULATOR
     // CLLocationManager permet la gestion de la position géographique de l'utilisateur
 	locationManager=[[CLLocationManager alloc] init];
