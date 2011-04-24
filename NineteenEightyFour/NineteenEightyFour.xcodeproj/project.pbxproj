@@ -24,6 +24,8 @@
 		8E1C8E3B136338020081C5F7 /* Icon@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C8E38136338020081C5F7 /* Icon@2.png */; };
 		8E1C8E3C136338020081C5F7 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C8E39136338020081C5F7 /* iTunesArtwork */; };
 		8E2DBBB013640C8B00F582DD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2DBBAF13640C8B00F582DD /* MediaPlayer.framework */; };
+		8E34264D13641ACD009DE2DE /* KMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E34264C13641ACD009DE2DE /* KMLParser.m */; };
+		8E34265213641B51009DE2DE /* cameras.kml in Resources */ = {isa = PBXBuildFile; fileRef = 8E34265113641B51009DE2DE /* cameras.kml */; };
 		8EB39298136367B700E96B04 /* CameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB39297136367B600E96B04 /* CameraOverlayView.m */; };
 		8EB392A513636F5900E96B04 /* CameraOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB392A413636F5900E96B04 /* CameraOverlay.m */; };
 		8EB392A713637A5100E96B04 /* oeil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EB392A613637A5100E96B04 /* oeil.png */; };
@@ -76,6 +78,9 @@
 		8E1C8E38136338020081C5F7 /* Icon@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2.png"; sourceTree = "<group>"; };
 		8E1C8E39136338020081C5F7 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		8E2DBBAF13640C8B00F582DD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8E34264B13641ACD009DE2DE /* KMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMLParser.h; sourceTree = "<group>"; };
+		8E34264C13641ACD009DE2DE /* KMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMLParser.m; sourceTree = "<group>"; };
+		8E34265113641B51009DE2DE /* cameras.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cameras.kml; sourceTree = "<group>"; };
 		8EB39296136367B600E96B04 /* CameraOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlayView.h; sourceTree = "<group>"; };
 		8EB39297136367B600E96B04 /* CameraOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlayView.m; sourceTree = "<group>"; };
 		8EB392A313636F5900E96B04 /* CameraOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlay.h; sourceTree = "<group>"; };
@@ -164,6 +169,8 @@
 		8E13563D13621BC90038C749 /* NineteenEightyFour */ = {
 			isa = PBXGroup;
 			children = (
+				8E34264B13641ACD009DE2DE /* KMLParser.h */,
+				8E34264C13641ACD009DE2DE /* KMLParser.m */,
 				8E13564613621BC90038C749 /* NineteenEightyFourAppDelegate.h */,
 				8E13564713621BC90038C749 /* NineteenEightyFourAppDelegate.m */,
 				F4547A661362E62200D39F65 /* Camera.h */,
@@ -218,6 +225,7 @@
 		8E49DEC21362D57F0020D931 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E34265113641B51009DE2DE /* cameras.kml */,
 				F4D60EC41364179700150BE4 /* son_alerte.wav */,
 				8EE2A80D13640378000A72B1 /* intro.m4v */,
 				F41938E11363A075000FF869 /* son_game.wav */,
@@ -316,6 +324,7 @@
 				F41938E21363A075000FF869 /* son_game.wav in Resources */,
 				8EE2A80E13640378000A72B1 /* intro.m4v in Resources */,
 				F4D60EC51364179700150BE4 /* son_alerte.wav in Resources */,
+				8E34265213641B51009DE2DE /* cameras.kml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +366,7 @@
 				8EB39298136367B700E96B04 /* CameraOverlayView.m in Sources */,
 				8EB392A513636F5900E96B04 /* CameraOverlay.m in Sources */,
 				F49D2BD31363854E00DABCFE /* MenuViewController.m in Sources */,
+				8E34264D13641ACD009DE2DE /* KMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
