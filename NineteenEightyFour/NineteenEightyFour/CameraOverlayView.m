@@ -8,7 +8,7 @@
 {
     self = [super initWithOverlay:overlay];
     if (self) {
-        oeil = [UIImage imageNamed:@"oeil"];
+        oeil = [[UIImage imageNamed:@"oeil"] retain];
     }
     return self;
 }
