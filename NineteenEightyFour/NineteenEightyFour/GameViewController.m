@@ -135,6 +135,7 @@ const CLLocationDegrees kLatitudeDelta = .002;
 
     for (id<MKAnnotation> point in annotations) {
         CLLocationCoordinate2D cameraPosition = [point coordinate];
+        if (cameraPosition.latitude < 40) continue;
         [self addCameraWithPosition:cameraPosition andRadius:cameraRadius];
     }
 
