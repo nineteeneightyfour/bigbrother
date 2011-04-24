@@ -3,6 +3,7 @@
 @implementation CameraOverlay
 
 @synthesize cameras;
+@synthesize playerPosition;
 
 - (id)initWithCameras:(NSArray*)cameras_
 {

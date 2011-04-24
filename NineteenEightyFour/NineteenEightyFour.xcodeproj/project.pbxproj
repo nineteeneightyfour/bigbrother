@@ -36,6 +36,7 @@
 		F41938E013639A15000FF869 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41938DF13639A15000FF869 /* AVFoundation.framework */; };
 		F41938E21363A075000FF869 /* son_game.wav in Resources */ = {isa = PBXBuildFile; fileRef = F41938E11363A075000FF869 /* son_game.wav */; };
 		F428CAEB1362C01600B93651 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F428CAEA1362C01600B93651 /* CoreLocation.framework */; };
+		F429616A1364320F0057E42D /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = F42961691364320F0057E42D /* player.png */; };
 		F4547A641362E3DE00D39F65 /* CameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A631362E3DE00D39F65 /* CameraTests.m */; };
 		F4547A681362E62200D39F65 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A671362E62200D39F65 /* Camera.m */; };
 		F4547A691362E62200D39F65 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547A671362E62200D39F65 /* Camera.m */; };
@@ -95,6 +96,7 @@
 		F41938DF13639A15000FF869 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F41938E11363A075000FF869 /* son_game.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = son_game.wav; sourceTree = "<group>"; };
 		F428CAEA1362C01600B93651 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F42961691364320F0057E42D /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		F4547A631362E3DE00D39F65 /* CameraTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTests.m; sourceTree = "<group>"; };
 		F4547A661362E62200D39F65 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		F4547A671362E62200D39F65 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				8E34265313642697009DE2DE /* vignette_rouge.png */,
 				8E34265113641B51009DE2DE /* cameras.kml */,
 				F4D60EC41364179700150BE4 /* son_alerte.wav */,
+				F42961691364320F0057E42D /* player.png */,
 				8EE2A80D13640378000A72B1 /* intro.m4v */,
 				F41938E11363A075000FF869 /* son_game.wav */,
 				F49D2BD813638E5D00DABCFE /* home.png */,
@@ -333,6 +336,7 @@
 				8E34265213641B51009DE2DE /* cameras.kml in Resources */,
 				8E34265413642697009DE2DE /* vignette_rouge.png in Resources */,
 				8E34265613642B49009DE2DE /* hack.m4v in Resources */,
+				F429616A1364320F0057E42D /* player.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
