@@ -17,6 +17,7 @@
 - (void)addCameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius;
 
 - (AVAudioPlayer*)makeAudioPlayer:(NSString*)path ofType:(NSString*)type withVolume:(float) volume;
+- (void)moveVolumeForPlay:(AVAudioPlayer*)player Toward:(float)volume;
 
 
 @end

@@ -57,14 +57,46 @@ const CLLocationDegrees kLatitudeDelta = .002;
 
 #if TARGET_IPHONE_SIMULATOR
     [self playerMovedTo:CLLocationCoordinate2DMake(48.870262, 2.342624)];
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 #endif
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+
 
 }
 
 - (void)tick
 {
+#if TARGET_IPHONE_SIMULATOR
     [self playerMovedTo:CLLocationCoordinate2DMake(lastPosition.latitude + 0.000001, lastPosition.longitude)];
+#endif
+    
+    MKCoordinateRegion region;
+	region.center = lastPosition;
+	region.span.latitudeDelta = kLatitudeDelta;
+	region.span.longitudeDelta = kLatitudeDelta;
+	[mapView setRegion:region animated:TRUE];
+    
+
+    
+    BOOL isSpotted = false;
+    for (Camera *camera in cameras) {
+        camera.isActive = [camera seesPoint:lastPosition];
+        if (camera.isActive) {
+            isSpotted = YES;
+        }
+    }
+    
+    if (isSpotted) {
+        [self moveVolumeForPlay:spottedLoopSoundPlayer Toward:1.0];
+        [self moveVolumeForPlay:appGameLoopSoundPlayer Toward:0.0];
+    } else {
+        [self moveVolumeForPlay:appGameLoopSoundPlayer Toward:1.0];
+        [self moveVolumeForPlay:spottedLoopSoundPlayer Toward:0.0];
+    }
+    
+    id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
+    CameraOverlayView *theOverlayView = (CameraOverlayView *)[mapView viewForOverlay:theOverlay];
+    [theOverlayView setNeedsDisplayInMapRect:MKMapRectWorld];
+
 }
 
 - (void)createCameras
@@ -89,39 +121,18 @@ const CLLocationDegrees kLatitudeDelta = .002;
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    CLLocationCoordinate2D coordinate = newLocation.coordinate;
-    [self playerMovedTo:coordinate];
+    [self playerMovedTo: newLocation.coordinate];
 }
 
 - (void)playerMovedTo:(CLLocationCoordinate2D)coordinate
 {
-    MKCoordinateRegion region;
-	region.center = coordinate;
-	region.span.latitudeDelta = kLatitudeDelta;
-	region.span.longitudeDelta = kLatitudeDelta;
-	[mapView setRegion:region animated:TRUE];
-    
     lastPosition = coordinate;
-    
-    BOOL isSpotted = false;
-    for (Camera *camera in cameras) {
-        camera.isActive = [camera seesPoint:lastPosition];
-        if (camera.isActive) {
-            isSpotted = YES;
-        }
-    }
-    
-    if (isSpotted) {
-        [self.appGameLoopSoundPlayer setVolume:0.0];
-        [self.spottedLoopSoundPlayer setVolume:1.0];
-    } else {
-        [self.appGameLoopSoundPlayer setVolume:1.0];
-        [self.spottedLoopSoundPlayer setVolume:0.0];
-    }
+}
 
-    id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
-    CameraOverlayView *theOverlayView = (CameraOverlayView *)[mapView viewForOverlay:theOverlay];
-    [theOverlayView setNeedsDisplayInMapRect:MKMapRectWorld];
+- (void)moveVolumeForPlay:(AVAudioPlayer*)player Toward:(float)volume
+{
+    float actualVolume = [player volume];
+    [player setVolume:(9*actualVolume + volume)/10];
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
