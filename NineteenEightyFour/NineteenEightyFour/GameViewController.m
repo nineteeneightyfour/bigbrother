@@ -12,6 +12,8 @@ const CLLocationDegrees kLatitudeDelta = .002;
 @synthesize vignette;
 @synthesize appGameLoopSoundPlayer;
 @synthesize spottedLoopSoundPlayer;
+@synthesize hackSwitch;
+@synthesize moviePlayerController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,7 +46,10 @@ const CLLocationDegrees kLatitudeDelta = .002;
     self.appGameLoopSoundPlayer = [self makeAudioPlayer:@"son_game" ofType:@"wav" withVolume:1.0];
     self.spottedLoopSoundPlayer = [self makeAudioPlayer:@"son_alerte" ofType:@"wav" withVolume:0.0];
 
-
+    NSString *movpath = [[NSBundle mainBundle] pathForResource:@"hack" ofType:@"m4v"];
+    
+    self.moviePlayerController = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL fileURLWithPath:movpath]];
+    
 #if !TARGET_IPHONE_SIMULATOR
     // CLLocationManager permet la gestion de la position géographique de l'utilisateur
 	locationManager=[[CLLocationManager alloc] init];
@@ -60,6 +65,7 @@ const CLLocationDegrees kLatitudeDelta = .002;
 #if TARGET_IPHONE_SIMULATOR
     [self playerMovedTo:CLLocationCoordinate2DMake(48.870262, 2.342624)];
 #endif
+    NSLog(@"starting timer...");
     timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 
 
@@ -68,16 +74,17 @@ const CLLocationDegrees kLatitudeDelta = .002;
 - (void)tick
 {
 #if TARGET_IPHONE_SIMULATOR
-    [self playerMovedTo:CLLocationCoordinate2DMake(lastPosition.latitude + 0.000001, lastPosition.longitude)];
+    double newLat = lastPosition.latitude + 0.000005;
+    double newLong = lastPosition.longitude;
+    NSLog(@"moving to (%f,%f)", newLat, newLong);
+   [self playerMovedTo:CLLocationCoordinate2DMake(newLat, newLong)];
 #endif
     
     MKCoordinateRegion region;
 	region.center = lastPosition;
 	region.span.latitudeDelta = kLatitudeDelta;
 	region.span.longitudeDelta = kLatitudeDelta;
-	[mapView setRegion:region animated:TRUE];
-    
-
+	[mapView setRegion:region animated:NO];
     
     BOOL isSpotted = false;
     for (Camera *camera in cameras) {
@@ -97,8 +104,10 @@ const CLLocationDegrees kLatitudeDelta = .002;
     
     if (isSpotted) {
         self.vignette.image = [UIImage imageNamed:@"vignette_rouge"];
+        self.hackSwitch.hidden = NO;
     } else {
         self.vignette.image = [UIImage imageNamed:@"vignette"];
+        self.hackSwitch.hidden = YES;
     }
     
     id<MKOverlay> theOverlay = [[mapView overlays] objectAtIndex:0];
@@ -177,6 +186,15 @@ const CLLocationDegrees kLatitudeDelta = .002;
     [audioPLayer setNumberOfLoops: -1];
     [audioPLayer play];
     return audioPLayer;
+}
+
+- (IBAction)startHack
+{
+    MPMoviePlayerController *moviePlayer = self.moviePlayerController.moviePlayer;
+    
+    moviePlayer.controlStyle = MPMovieControlStyleNone;
+
+    [self presentMoviePlayerViewControllerAnimated:self.moviePlayerController];
 }
 
 @end

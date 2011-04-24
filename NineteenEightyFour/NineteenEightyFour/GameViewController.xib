@@ -12,6 +12,7 @@
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<string>IBUISwitch</string>
 			<string>IBUIImageView</string>
 			<string>IBUIView</string>
 			<string>IBMKMapView</string>
@@ -56,12 +57,26 @@
 						<int key="IBMKMapType">1</int>
 						<bool key="IBMKShowsUserLocation">YES</bool>
 					</object>
+					<object class="IBUISwitch" id="685821411">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{113, 303}, {94, 27}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<bool key="IBUIOn">YES</bool>
+					</object>
 					<object class="IBUIImageView" id="660551874">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="685821411"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
@@ -123,6 +138,23 @@
 					</object>
 					<int key="connectionID">8</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">hackSwitch</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="685821411"/>
+					</object>
+					<int key="connectionID">11</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">startHack</string>
+						<reference key="source" ref="685821411"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">12</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -140,6 +172,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="660551874"/>
 							<reference ref="34825697"/>
+							<reference ref="685821411"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">View</string>
@@ -165,6 +198,12 @@
 						<reference key="object" ref="660551874"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">10</int>
+						<reference key="object" ref="685821411"/>
+						<reference key="parent" ref="191373211"/>
+						<string key="objectName">Hack Switch</string>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -175,6 +214,7 @@
 					<string>-2.CustomClassName</string>
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
+					<string>10.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
 				</object>
@@ -183,6 +223,7 @@
 					<string>GameViewController</string>
 					<string>UIResponder</string>
 					<string>{{556, 412}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -200,7 +241,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">8</int>
+			<int key="maxID">12</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -208,15 +249,28 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">GameViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">startHack</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">startHack</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">startHack</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>hackSwitch</string>
 							<string>mapView</string>
 							<string>vignette</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UISwitch</string>
 							<string>MKMapView</string>
 							<string>UIImageView</string>
 						</object>
@@ -225,11 +279,16 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>hackSwitch</string>
 							<string>mapView</string>
 							<string>vignette</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">hackSwitch</string>
+								<string key="candidateClassName">UISwitch</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">mapView</string>
 								<string key="candidateClassName">MKMapView</string>

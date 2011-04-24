@@ -9,8 +9,10 @@
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) IBOutlet UIImageView *vignette;
+@property (nonatomic, retain) IBOutlet UISwitch *hackSwitch;
 @property (nonatomic, retain)	AVAudioPlayer			*appGameLoopSoundPlayer;
 @property (nonatomic, retain)	AVAudioPlayer			*spottedLoopSoundPlayer;
+@property (nonatomic, retain)	MPMoviePlayerViewController *moviePlayerController;
 
 - (void)createCameras;
 - (void)playerMovedTo:(CLLocationCoordinate2D)coordinate;
@@ -20,5 +22,6 @@
 - (AVAudioPlayer*)makeAudioPlayer:(NSString*)path ofType:(NSString*)type withVolume:(float) volume;
 - (void)moveVolumeForPlay:(AVAudioPlayer*)player Toward:(float)volume;
 
+- (IBAction)startHack;
 
 @end
