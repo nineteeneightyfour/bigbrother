@@ -1,6 +1,7 @@
 #import "GameViewController.h"
 #import "CameraOverlayView.h"
 #import "CameraOverlay.h"
+#import "KMLParser.h"
 
 const CLLocationDegrees kLatitudeDelta = .002;
 
@@ -103,8 +104,13 @@ const CLLocationDegrees kLatitudeDelta = .002;
 {
     CLLocationDistance cameraRadius = 35.0;
 
-    for (int i=0; i<2; i++) {
-        CLLocationCoordinate2D cameraPosition = CLLocationCoordinate2DMake(48.870058+i*0.0008, 2.342756);
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"cameras" ofType:@"kml"];
+    KMLParser *kml = [KMLParser parseKMLAtPath:path];
+
+    NSArray *annotations = [kml points];
+
+    for (id<MKAnnotation> point in annotations) {
+        CLLocationCoordinate2D cameraPosition = [point coordinate];
         [self addCameraWithPosition:cameraPosition andRadius:cameraRadius];
     }
 

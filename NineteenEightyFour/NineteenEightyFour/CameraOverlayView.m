@@ -34,9 +34,13 @@
         double mapRadius = f * camera.radius;
                 
         MKMapPoint mapCentre = MKMapPointForCoordinate(centre);
-        MKMapRect circleMapRect = MKMapRectMake(mapCentre.x - mapRadius, mapCentre.y - mapRadius, 2 * mapRadius, 2 * mapRadius);
+        MKMapRect cameraMapRect = MKMapRectMake(mapCentre.x - mapRadius, mapCentre.y - mapRadius, 2 * mapRadius, 2 * mapRadius);
         
-        CGRect cameraCGRect = [self rectForMapRect:circleMapRect];
+        if(! MKMapRectIntersectsRect(mapRect, cameraMapRect)) {
+            continue;
+        }
+        
+        CGRect cameraCGRect = [self rectForMapRect:cameraMapRect];
 
         if (camera.isActive) {
             CGContextSetRGBFillColor(context, 1,0,0,0.6);
