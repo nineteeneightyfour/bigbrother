@@ -55,7 +55,6 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBMKMapType">1</int>
-						<bool key="IBMKShowsUserLocation">YES</bool>
 					</object>
 					<object class="IBUIButton" id="83548043">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -63,7 +62,6 @@
 						<string key="NSFrame">{{52, 342}, {216, 53}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
