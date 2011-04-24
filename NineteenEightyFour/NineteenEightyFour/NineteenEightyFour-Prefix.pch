@@ -13,4 +13,5 @@
     #import <Foundation/Foundation.h>
     #import <MapKit/MapKit.h>
     #import <AVFoundation/AVFoundation.h>
+    #import <MediaPlayer/MediaPlayer.h>
 #endif

@@ -8,10 +8,14 @@
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain)	AVAudioPlayer			*appSoundPlayer;
 
 - (void)createCameras;
 - (void)playerMovedTo:(CLLocationCoordinate2D)coordinate;
 - (void)tick;
 - (void)addCameraWithPosition:(CLLocationCoordinate2D)cameraPosition andRadius:(CLLocationDistance)cameraRadius;
+
+- (void)playSound:(NSString*)path ofType:(NSString*)type;
+
 
 @end
